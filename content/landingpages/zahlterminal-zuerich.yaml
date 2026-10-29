@@ -1,0 +1,91 @@
+title: Zahlterminal Zürich mit Installation vor Ort
+pfad: /zahlterminal-zuerich
+cluster: regional
+navTitle: Zürich
+metaTitle: Zahlterminal Zürich, Beratung vor Ort | ibis payment
+metaDescription: 'Zahlterminal in Stadt und Kanton Zürich: Beratung, Installation und Support im Betrieb, Kassenanbindung inbegriffen. Konditionen offen, Miete ab CHF 19.'
+kicker: Zürich
+lead: Für Betriebe in Stadt und Kanton Zürich kommt der Berater vorbei, installiert das Terminal und bleibt erreichbar. Die Konditionen sind offen, ohne Mindestgebühr und monatlich kündbar.
+intro: |
+  In Zürich ist die Auswahl an Terminalanbietern gross, und der Vergleich ist schwer, weil viele Anbieter ihre Preise nicht publizieren. ibis payment vermittelt Terminals des Herstellers PayTec aus Effretikon, mit Abwicklung über das SwiPay-Bezahlnetzwerk. Die Gebühren stehen auf der Seite [Konditionen](/konditionen) und gelten in Zürich wie überall.
+
+  Was uns von einem Versandanbieter unterscheidet, ist der Service. Der Berater kommt in den Betrieb, installiert vor Ort und bleibt danach Ihr Ansprechpartner mit Direktwahl. Diese Seite zeigt, wie das in Stadt und Kanton Zürich abläuft, welche Terminals zu welchen Betrieben passen und was es kostet.
+sections:
+  - heading: Beratung und Installation in Stadt und Kanton Zürich
+    body: |
+      Der erste Schritt ist ein Gespräch, im Betrieb oder am Telefon. Es geht um den Zahlort: Tresen, Tisch, Kasse, Stand, Automat. Daraus ergibt sich das Modell. Dann schicken Sie uns Ihre letzte Abrechnung oder drei Zahlen, und Sie erhalten innert 24 Stunden eine Offerte, in der jede Gebühr einzeln steht, inklusive der Anteile für Interchange, Netzwerkgebühr und Marge.
+
+      Die Installation macht der Berater selbst. Er bringt das Terminal, richtet es ein, bindet die Kasse über OPI, ZVT oder KIT an, prüft WLAN und 4G-Empfang am Zahlort und macht eine Testzahlung. Das Team sieht, wie Trinkgeld, Storno und Tagesabschluss funktionieren. Aufschaltung und Einrichtung kosten CHF 0.
+
+      Wir bedienen die Stadt Zürich und den Kanton [Einzugsgebiet bestätigen]. Für Winterthur und die Region gibt es eine eigene Seite: [Zahlterminal Winterthur](/zahlterminal-winterthur). Den Termin für das erste Gespräch vereinbaren Sie über [Kontakt](/kontakt).
+  - heading: Typische Betriebe in Zürich
+    body: |
+      **Bars und Restaurants.** Hohe Frequenz, Service am Tisch, Terrasse, Trinkgeld, oft bis spät in die Nacht. Hier braucht es ein mobiles Terminal, das eine lange Schicht durchhält und bei WLAN-Lücken auf 4G wechselt. Der [PayTec N96](/geraete/paytec-n96) mit Drucker und 18 Tagen Standby oder der kompakte [PayTec N62](/geraete/paytec-n62) ohne Drucker sind dafür gebaut. Für Betriebe mit Wochenendbetrieb gibt es eine Notfallnummer [Regelung eintragen].
+
+      **Detailhandel.** Läden mit Kassensystem binden den [PayTec CT20P](/geraete/paytec-ct20p) an. Der Betrag kommt von der Kasse, das physische PIN-Pad ist auch für Menschen mit Sehbehinderung bedienbar. Bei internationaler Kundschaft fällt der Anteil ausländischer Karten ins Gewicht; der Zuschlag von 0.90 Prozentpunkten steht bei uns in der Offerte.
+
+      **Praxen und Dienstleister.** Wenige Zahlungen mit hohem Betrag, hoher Kreditkartenanteil. Ein stationäres Terminal am Empfang oder der [PayTec V3CT3](/geraete/paytec-v3ct3) mit Drucker für Praxen ohne Kassensystem.
+
+      **Events und Märkte.** Food-Stände, Festivals, Weihnachtsmärkte und Pop-ups brauchen ein Terminal für einige Wochen. Die Miete ist monatlich kündbar, siehe [Zahlterminal mieten](/zahlterminal-mieten).
+  - heading: Was es kostet
+    body: |
+      Die Konditionen gelten für Zürich wie für die ganze Schweiz, alle Preise exkl. MwSt.: Debitkarten Inland 0.75 %, Kreditkarten Inland 1.25 %, TWINT 1.00 %, American Express 1.90 %, Ausland- und Firmenkarten plus 0.90 Prozentpunkte, CHF 0.05 pro Zahlung. Terminal-Miete ab CHF 19 pro Monat inklusive Wartung, Updates und Ersatzgerät, Kauf ab CHF 390.
+
+      Keine Aufschaltgebühr, keine Mindestgebühr, keine Mindestlaufzeit, monatlich kündbar. Gutschrift gesammelt pro Tag am nächsten Werktag, Abrechnung einmal pro Monat auf einer Seite, jede Kartenart einzeln ausgewiesen.
+
+      Die Beispielrechnung unten zeigt eine Bar mit vielen Zahlungen und mittlerem Bon. Setzen Sie Ihre eigenen Zahlen ein oder tragen Sie Ihre heutigen Sätze aus der Abrechnung ein. Haben Sie heute schon ein Terminal, schicken Sie uns die Abrechnung: Wir unterbieten Ihre heutige Abrechnung, oder wir sagen Ihnen, dass es nicht geht.
+  - heading: TWINT und Kassenanbindung
+    body: |
+      Auf den Terminals von PayTec ist TWINT integriert. Der Betrag kommt vom Terminal oder von der Kasse, der QR-Code erscheint auf dem Display, die Zahlung landet auf derselben Abrechnung wie die Karten. Der QR-Aufsteller mit separatem Händlerkonto wird überflüssig. Details auf der Seite [TWINT Terminal](/twint-terminal).
+
+      Die Kassenanbindung läuft über die Schweizer Protokolle OPI, ZVT und KIT. Welches Protokoll Ihre Kasse spricht, klären wir vor der Installation. Wer gleichzeitig eine neue Kasse sucht, findet die Übersicht unter [Kassensysteme](/kassensysteme). Für Netzwerk und WLAN arbeiten wir mit InfraOne IT Solutions in Winterthur zusammen [Einsatzgebiet Zürich bestätigen].
+  - heading: Wechsel vom bisherigen Anbieter
+    body: |
+      Der Wechsel läuft in drei Schritten: Abrechnung schicken, Gegenrechnung innert 24 Stunden, Kündigung beim bisherigen Anbieter übernehmen wir. Die Installation legen wir auf den Stichtag, damit kein Tag ohne Terminal entsteht. Was beim Wechsel zu beachten ist, steht auf den Seiten [Worldline Alternative](/worldline-alternative) und [SumUp Alternative](/sumup-alternative).
+
+      Zwei Hinweise. Prüfen Sie die Kündigungsfrist Ihres heutigen Vertrags, bevor Sie den Wechsel planen; Verträge mit mehrjähriger Laufzeit und automatischer Verlängerung sind verbreitet. Und: Viele ältere Terminals verlieren voraussichtlich ab 2027 die Zulassung. Wer ohnehin wechseln muss, verhandelt beim Wechsel auch die Gebühren neu.
+beispiel:
+  aktiv: true
+  titel: Beispiel Bar
+  umsatz: 35000
+  bon: 22
+  kreditanteil: 30
+  vergleich: gross
+  erklaerung: Für eine Bar nehmen wir viele Zahlungen mit kleinem bis mittlerem Bon an; die Werte sind Platzhalter und lassen sich im Rechner anpassen.
+preisliste: []
+faq:
+  - frage: Kommt der Berater in Zürich in den Betrieb?
+    antwort: |
+      Ja. Beratung, Installation, Kassenanbindung und Einweisung finden bei Ihnen statt, in der Stadt und im Kanton Zürich. Der Berater, der installiert, bleibt danach Ihr Ansprechpartner mit Direktwahl.
+  - frage: Sind die Konditionen in Zürich anders als im Rest der Schweiz?
+    antwort: |
+      Nein. Die Sätze auf der Seite [Konditionen](/konditionen) gelten schweizweit und sind öffentlich. Was sich mit der Nähe ändert, ist der Service vor Ort.
+  - frage: Welches Terminal passt für eine Bar mit Terrasse?
+    antwort: |
+      Ein mobiles Terminal mit WLAN und 4G, das automatisch wechselt, wenn eines ausfällt. Der N96 hat einen Drucker und einen Akku für lange Nächte, der N62 ist kompakt und schickt den Beleg digital. Bei beiden wird das Trinkgeld am Terminal eingegeben.
+  - frage: Was ist mit ausländischen Karten von Touristen?
+    antwort: |
+      Ausländische und Firmenkarten kosten einen Zuschlag von 0.90 Prozentpunkten auf den jeweiligen Satz. Der Zuschlag steht in der Offerte und auf der Abrechnung einzeln ausgewiesen. Wer viele Touristen bedient, liest den Anteil aus der heutigen Abrechnung und rechnet ihn im Vergleich mit.
+  - frage: Wie schnell bekomme ich bei einem Defekt Ersatz?
+    antwort: |
+      Ein Ersatzgerät erhalten Sie bei der Miete ohne Zusatzkosten [Frist eintragen]. Bis dahin können Sie Kartenzahlungen über die App Softpay auf dem Handy annehmen, siehe [Handy als Terminal](/handy-als-terminal).
+  - frage: Kann ich das Terminal nur für ein Event mieten?
+    antwort: |
+      Ja. Die Miete ist monatlich kündbar, ohne Mindestlaufzeit. Für Festivals, Märkte und Pop-ups mieten Sie das Terminal für die Dauer des Bedarfs; die Einrichtung ist inbegriffen.
+bausteine:
+  rechner: true
+  geraete: true
+  zerlegung: false
+  preisliste: false
+formular: none
+cta:
+  titel: Beratung vor Ort anfragen.
+  text: Wir kommen in Ihren Betrieb in Zürich, schauen uns den Zahlort an und bringen das passende Terminal mit.
+  label: Beratung anfragen
+  href: /kontakt
+verwandt:
+  - /konditionen
+  - /zahlterminal
+  - /zahlterminal-winterthur
+  - /zahlterminal-ostschweiz
+  - /twint-terminal
