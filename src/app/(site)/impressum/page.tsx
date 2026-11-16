@@ -44,24 +44,22 @@ export default async function ImpressumPage() {
           </div>
         </div>
       </Section>
-      <Section label="Vertragspartner" sub="Pflichtangabe für Händler." tight>
+      <Section label="Vertragspartner" sub="Mit wem Sie den Vertrag schliessen." tight>
         <div className="prose">
+          <p>{site.vertragspartner}</p>
           <p>
-            <strong>Acquiring (Abwicklung und Auszahlung der Kartenzahlungen):</strong> {site.vertragspartner}
-          </p>
-          <p>
-            <strong>Terminals (Miete und Kauf):</strong> [Vertragspartner für Terminal-Miete und -Kauf eintragen: {site.legalName} oder SwiPay AG.]
-          </p>
-          <p>
-            {site.legalName} ist exklusiver Vertriebspartner der SwiPay AG, Oberneuhofstrasse 3, 6340 Baar. Das Acquiring erfolgt über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer. Terminals stammen von der PayTec AG, Vogelsangstrasse 15, 8307 Effretikon. Die für den
-            Händler geltenden Vertragsbedingungen finden Sie in den <Link href="/agb">AGB</Link> und in den <a href="https://swipay.ch/vertragsunterlagen/" target="_blank" rel="noopener noreferrer">Vertragsunterlagen der SwiPay AG</a>.
+            Das Acquiring erfolgt über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer. Terminals stammen von der PayTec AG, Vogelsangstrasse 15, 8307 Effretikon. Die für Sie geltenden Bedingungen finden Sie unter <Link href="/agb">Vertrag und Bedingungen</Link> und in den{' '}
+            <a href="https://swipay.ch/hilfecenter/vertragsunterlagen/" target="_blank" rel="noopener noreferrer">
+              Vertragsunterlagen der SwiPay AG
+            </a>
+            .
           </p>
         </div>
       </Section>
       <Section label="Haftung und Urheberrecht" tight>
         <div className="prose prose-sm">
           <p>
-            Alle Preise auf dieser Website verstehen sich exkl. MwSt. und mit dem jeweils angegebenen Stand. Verbindlich sind die Konditionen in der schriftlichen Offerte. Der Rechner liefert Richtwerte auf Basis Ihrer Eingaben und der genannten Vergleichswerte; für Abweichungen zu Ihrer tatsächlichen Abrechnung
+            Die Sätze auf dieser Website sind Höchstsätze und Richtwerte, exkl. MwSt. und mit dem jeweils angegebenen Stand. Verbindlich sind die schriftliche Offerte und der Vertrag mit der SwiPay AG. Der Rechner liefert eine Schätzung auf Basis Ihrer Eingaben und von Branchendurchschnitten; für Abweichungen zu Ihrer tatsächlichen Abrechnung
             übernehmen wir keine Haftung.
           </p>
           <p>Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität übernehmen wir keine Gewähr. Haftungsansprüche wegen Schäden materieller oder immaterieller Art, die aus dem Zugriff oder der Nutzung der Inhalte entstehen, sind ausgeschlossen, soweit gesetzlich zulässig.</p>

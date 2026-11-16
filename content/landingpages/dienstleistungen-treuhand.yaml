@@ -11,13 +11,13 @@ intro: |
 
   ibis payment vermittelt die Buchhaltung an [Treuhandpartner], der die Kassensysteme und die Abrechnung aus unserem Netzwerk kennt. Kassenabschluss und Kartenabrechnung werden digital übernommen, nicht abgetippt. Die Preise sind Pauschalen, die vor dem Start festgelegt werden, nicht Stundenrechnungen am Ende des Monats [Preismodell mit Treuhandpartner bestätigen].
 
-  Diese Seite beschreibt, was der Treuhandpartner übernimmt, was Sie selbst liefern müssen und warum eine Abrechnung auf einer Seite für die Buchhaltung einen Unterschied macht. Steuerliche Fragen zu Ihrem Betrieb beantwortet der Treuhandpartner als Fachperson, nicht diese Seite. Die Übersicht aller Dienstleistungen finden Sie unter [Dienstleistungen](/dienstleistungen).
+  Diese Seite beschreibt, was der Treuhandpartner übernimmt, was Sie selbst liefern müssen und warum eine übersichtliche Kartenabrechnung für die Buchhaltung einen Unterschied macht. Steuerliche Fragen zu Ihrem Betrieb beantwortet der Treuhandpartner als Fachperson, nicht diese Seite. Die Übersicht aller Dienstleistungen finden Sie unter [Dienstleistungen](/dienstleistungen).
 sections:
   - heading: Kassenabschluss und Kartenabrechnung direkt in die Buchhaltung
     body: |
       Der Tagesabschluss Ihrer Kasse enthält alles, was die Buchhaltung braucht: Umsatz nach MwSt.-Satz, Zahlungsarten (Bargeld, Karte, TWINT, Gutschein), Trinkgeld, Storni. Statt diesen Abschluss auszudrucken und abzulegen, wird er als Datei an den Treuhandpartner übermittelt, je nach [Kassensystem](/kassensysteme) automatisch oder als monatlicher Export.
 
-      Die Kartenabrechnung von ibis payment kommt einmal pro Monat auf einer Seite: Umsatz pro Kartenart, Gebühren pro Kartenart, Fixgebühren, Terminalmiete, Gutschriften. Der Treuhänder bucht daraus die Gebühren als Aufwand und gleicht die Gutschriften auf dem Bankkonto mit den Kassenabschlüssen ab. Weil Kartenumsatz, TWINT und Gebühren auf derselben Abrechnung stehen, entfällt das Zusammensuchen aus mehreren Portalen.
+      Dazu kommt die Kartenabrechnung. Sie zeigt, über welchen Kanal die Umsätze kamen und welche Gebühren verrechnet wurden; die Auszahlung erfolgt in Schweizer Franken auf Ihr Geschäftskonto. Der Treuhänder bucht daraus die Gebühren als Aufwand und gleicht die Gutschriften auf dem Bankkonto mit den Kassenabschlüssen ab. Weil Umsätze und Gebühren auf derselben Abrechnung stehen, entfällt das Zusammensuchen aus mehreren Portalen.
 
       So kann die Buchhaltung am Monatsende abgeschlossen sein, nicht erst im Frühjahr. Sie sehen jeden Monat, wo der Betrieb steht.
   - heading: MwSt.-Abrechnung ohne Nachfragen
@@ -34,7 +34,7 @@ sections:
     body: |
       Am Jahresende entstehen Bilanz, Erfolgsrechnung und die Steuererklärung der Firma. Wenn die Buchhaltung monatlich geführt wurde, ist der Abschluss eine Abrundung, keine Aufarbeitung: Abschreibungen auf Einrichtung und gekaufte Terminals, Abgrenzungen, Inventar, Rückstellungen. Bei Einzelfirmen gehört die Verbindung zur privaten Steuererklärung dazu, bei GmbH und AG die Vorbereitung der Generalversammlung.
 
-      Der Treuhandpartner bespricht den Abschluss mit Ihnen, bevor er eingereicht wird. Sie sehen, wo Umsatz und Marge im Vergleich zum Vorjahr stehen und was sich steuerlich auswirkt. Das ist auch der Moment, in dem sich Gebühren für Zahlungen, Miete und Dienstleistungen gesamthaft prüfen lassen; unsere [Konditionen](/konditionen) stehen offen, damit dieser Vergleich möglich ist. Alle Pauschalen verstehen sich exkl. MwSt.
+      Der Treuhandpartner bespricht den Abschluss mit Ihnen, bevor er eingereicht wird. Sie sehen, wo Umsatz und Marge im Vergleich zum Vorjahr stehen und was sich steuerlich auswirkt. Das ist auch der Moment, in dem sich Gebühren für Zahlungen, Miete und Dienstleistungen gesamthaft prüfen lassen; womit Sie vergleichen können, steht unter [Konditionen](/konditionen). Alle Pauschalen verstehen sich exkl. MwSt.
   - heading: Was der Betrieb selbst liefern muss
     body: |
       Eine Pauschale funktioniert nur, wenn die Unterlagen vollständig und pünktlich kommen. Das müssen Sie liefern, in der Regel monatlich und digital:
@@ -45,15 +45,16 @@ sections:
       - **Lohnangaben**, Stunden, Ein- und Austritte, Änderungen bei Pensum oder Adresse.
       - **Verträge**, die sich auf die Buchhaltung auswirken: Miete, Leasing, Kredite, Versicherungen.
 
-      Die Kartenabrechnung von ibis payment kann mit Ihrer Zustimmung direkt an den Treuhandpartner gehen [Weiterleitung technisch bestätigen]. Beim Start legt er mit Ihnen fest, über welchen Weg die Unterlagen kommen (App, Ordner, E-Mail) und bis wann im Folgemonat. Wer die Belege laufend hochlädt, statt sie zu sammeln, braucht dafür wenige Minuten pro Woche.
-  - heading: Warum eine Abrechnung auf einer Seite für die Buchhaltung zählt
+      Ihre Kartenabrechnung kann mit Ihrer Zustimmung direkt an den Treuhandpartner gehen [Weiterleitung technisch bestätigen]. Beim Start legt er mit Ihnen fest, über welchen Weg die Unterlagen kommen (App, Ordner, E-Mail) und bis wann im Folgemonat. Wer die Belege laufend hochlädt, statt sie zu sammeln, braucht dafür wenige Minuten pro Woche.
+  - heading: Warum eine übersichtliche Kartenabrechnung für die Buchhaltung zählt
     body: |
       Je nach Anbieter besteht die Kartenabrechnung aus mehreren Dokumenten: eine Abrechnung des Acquirers, eine Rechnung des Terminal-Anbieters, eine separate TWINT-Abrechnung, dazu Gutschriften mit Abzügen, die nicht einzeln ausgewiesen sind. Der Treuhänder muss diese Dokumente zusammenführen und die Gebühren aus der Differenz zwischen Umsatz und Gutschrift herleiten. Das kostet Zeit, und die Gebühren verschwinden in einer Sammelposition.
 
-      Die Abrechnung von ibis payment ist eine Seite mit allen Positionen: Umsatz, Gebühren pro Kartenart, Fixbetrag, Miete, Gutschriften. Der Treuhänder bucht jede Position auf das passende Konto, und Sie sehen in der Erfolgsrechnung, was Kartenzahlungen Ihren Betrieb kosten. Diese Zahl ist die Grundlage, um Gebühren zu vergleichen, und sie ist der Grund, warum wir die Abrechnung so bauen. Wenn Sie zuerst wissen wollen, ob der Treuhandpartner zu Ihrem Betrieb passt, sprechen Sie mit Ihrem Berater über [Kontakt](/kontakt). Er stellt den Kontakt her und gibt die Angaben zu Kasse und Abrechnung mit.
+      Bei SwiPay zeigt die Abrechnung, über welchen Kanal die Umsätze kamen, und die Gebührenstruktur ist transparent, ohne versteckte Kosten. Der Treuhänder bucht jede Position auf das passende Konto, und Sie sehen in der Erfolgsrechnung, was Kartenzahlungen Ihren Betrieb kosten. Diese Zahl ist die Grundlage, um Gebühren zu vergleichen. Wenn Sie zuerst wissen wollen, ob der Treuhandpartner zu Ihrem Betrieb passt, sprechen Sie mit Ihrem Ansprechpartner über [Kontakt](/kontakt). Er stellt den Kontakt her und gibt die Angaben zu Kasse und Abrechnung mit.
 beispiel:
   aktiv: false
   titel: Keine Beispielrechnung
+  branche: sonstige
   umsatz: 0
   bon: 0
   kreditanteil: 0
@@ -78,7 +79,7 @@ faq:
       Nicht zwingend. Wenn Ihre Software einen Export für Kassenabschlüsse und eine Bankanbindung hat, kann der Treuhandpartner damit arbeiten. Wo das nicht der Fall ist, schlägt er eine Software vor, in die Sie Belege per App hochladen.
   - frage: Bekommt der Treuhänder meine Kartenabrechnung automatisch?
     antwort: |
-      Auf Wunsch ja. Mit Ihrer Zustimmung geht die monatliche Abrechnung von ibis payment direkt an den Treuhandpartner [Weiterleitung technisch bestätigen]. Sie erhalten sie weiterhin selbst.
+      Auf Wunsch ja. Mit Ihrer Zustimmung geht Ihre Kartenabrechnung direkt an den Treuhandpartner [Weiterleitung technisch bestätigen]. Sie erhalten sie weiterhin selbst.
   - frage: Kann ich nur den Jahresabschluss machen lassen und die Buchhaltung selbst führen?
     antwort: |
       Ja. Die Pauschale für den Jahresabschluss gilt auch, wenn Sie die laufende Buchhaltung selbst führen. Der Treuhandpartner prüft dann die Buchhaltung vor dem Abschluss; der Aufwand dafür hängt von der Qualität der Unterlagen ab und wird vorher genannt.

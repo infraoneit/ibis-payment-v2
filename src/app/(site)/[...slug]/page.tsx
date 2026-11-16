@@ -4,18 +4,17 @@ import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { getGeraete, getKonditionen, getLandingpageByPath, getLandingpages, getSite } from '@/lib/content';
 import { pageMeta } from '@/lib/seo';
-import { chf, dateDE, pct } from '@/lib/format';
+import { dateDE } from '@/lib/format';
 import { PageHero } from '@/components/content/PageHero';
-import { Section, Intro, Arrow } from '@/components/layout/Section';
+import { Section, Arrow } from '@/components/layout/Section';
 import { Reveal } from '@/components/motion/Reveal';
 import { Markdown } from '@/components/content/Markdown';
 import { Faq } from '@/components/content/Faq';
 import { CtaBand } from '@/components/content/CtaBand';
 import { ExampleCalc } from '@/components/pricing/ExampleCalc';
 import { Calculator } from '@/components/pricing/Calculator';
-import { clusterForPath } from '@/lib/swipay-calc';
+import { clusterForPath, type ClusterKey } from '@/lib/swipay-calc';
 import { PriceList, SimplePriceList } from '@/components/pricing/PriceList';
-import { FeeBreakdown } from '@/components/pricing/FeeBreakdown';
 import { DeviceGrid } from '@/components/devices/DeviceGrid';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { WebdesignForm } from '@/components/forms/WebdesignForm';
@@ -37,7 +36,7 @@ export async function generateStaticParams() {
 
 const CLUSTER_PARENT: Record<string, { name: string; href: string } | null> = {
   payment: null,
-  regional: { name: 'Branchen und Regionen', href: '/branchen' },
+  regional: { name: 'Branchen', href: '/branchen' },
   branche: { name: 'Branchen', href: '/branchen' },
   webdesign: { name: 'Webdesign', href: '/webdesign' },
   wissen: { name: 'Wissen', href: '/wissen' },
@@ -59,10 +58,9 @@ function facts(cluster: string, k: Konditionen, pfad: string): { icon: IconName;
   if (cluster === 'dienstleistung' && pfad.includes('telefonie'))
     return [F('phone', 'ab CHF 15.00 / Monat', 'peoplefone vPBX, 1 bis 5 Benutzer, inkl. MwSt.'), F('wifi', 'ab CHF 39.00 / Monat', 'iway Business Internet 100 Mbit/s, exkl. MwSt.'), F('handshake', 'InfraOne richtet ein', 'Telefon, Internet, Netzwerk, Kasse, Terminal'), F('headset', 'Ein Ansprechpartner', 'für alles, was im Betrieb am Netz hängt')];
   if (cluster === 'dienstleistung')
-    return [F('handshake', 'Ein Ansprechpartner', 'Wir koordinieren den Partner'), F('badge', 'Persönlich geprüft', 'Partner, die wir selbst kennen'), F('repeat', 'Monatlich kündbar', 'wo immer möglich'), F('clock', 'Rückmeldung', 'innert zwei Werktagen [bestätigen]')];
-  if (cluster === 'wissen')
-    return [F('percent', pct(k.debit), 'Debitkarten Inland bei ibis payment'), F('card', pct(k.kredit), 'Kreditkarten Inland'), F('coins', chf(k.txFix, 2), 'pro Zahlung, alle Kartenarten'), F('receipt', 'Eine Seite', 'Monatsabrechnung, jede Kartenart einzeln')];
-  return [F('percent', pct(k.debit), 'Debitkarten Inland'), F('card', pct(k.kredit), 'Kreditkarten Inland'), F('terminal', `${chf(k.miete)} / Monat`, 'Terminal-Miete inkl. Ersatzgerät'), F('repeat', 'Monatlich kündbar', 'keine Aufschaltung, keine Mindestgebühr')];
+    return [F('handshake', 'Ein Ansprechpartner', 'Wir koordinieren den Partner'), F('badge', 'Persönlich geprüft', 'Partner, die wir selbst kennen'), F('clock', '24 Stunden', 'Antwort an Werktagen'), F('receipt', 'Offerte zuerst', 'Sie entscheiden, wenn die Zahlen vorliegen')];
+  const hoch = (n: number) => `max. ${parseFloat(n.toFixed(2))} %`;
+  return [F('percent', hoch(k.debit), 'Debitkarten, genauer Satz in der Offerte'), F('card', hoch(k.kredit), 'Kreditkarten, genauer Satz in der Offerte'), F('clock', '24 Stunden', 'Antwort an Werktagen, mit Vergleichsrechnung'), F('timer', '72 Stunden', 'im Normalfall vom Vertrag bis zur ersten Zahlung')];
 }
 
 export default async function LandingPage({ params }: { params: Promise<{ slug: string[] }> }) {
@@ -127,7 +125,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      <Section label="Überblick" sub={isWeb ? 'Website und IT mit InfraOne IT Solutions, Winterthur.' : `Preise exkl. MwSt., Stand ${dateDE(k.stand)}.`} tight>
+      <Section label="Überblick" sub={isWeb ? 'Website und IT mit InfraOne IT Solutions, Winterthur.' : `Sätze exkl. MwSt., Stand ${dateDE(k.stand)}.`} tight>
         <div className="overview">
           <Reveal>
             <Markdown text={p.intro} />
@@ -156,7 +154,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
         <Section tone="dark" label="Beispielrechnung" sub="Gerechnet mit den aktuellen Konditionen; mit Ihren eigenen Zahlen im Rechner.">
           <Reveal>
             <div style={{ color: 'var(--text)' }}>
-              <ExampleCalc k={k} titel={p.beispiel.titel || 'Beispiel'} umsatz={p.beispiel.umsatz} bon={p.beispiel.bon} pfad={p.pfad} erklaerung={p.beispiel.erklaerung} />
+              <ExampleCalc k={k} titel={p.beispiel.titel || 'Beispiel'} umsatz={p.beispiel.umsatz} bon={p.beispiel.bon} pfad={p.pfad} branche={p.beispiel.branche} erklaerung={p.beispiel.erklaerung} />
             </div>
           </Reveal>
         </Section>
@@ -183,24 +181,13 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
         </div>
       </Section>
 
-      {p.bausteine.zerlegung && (
-        <Section tone="dark" label="Transparenz" sub="So setzt sich eine Gebühr zusammen, am Beispiel einer Schweizer Debitkarte.">
-          <Reveal>
-            <Intro title={`Von ${pct(k.debit)} gehen ${pct((k.zerlegung.interchange ?? 0) + (k.zerlegung.netzwerk ?? 0))} an Bank und Kartennetzwerk. Der Rest ist unsere Arbeit.`} />
-          </Reveal>
-          <Reveal delay={1}>
-            <FeeBreakdown debit={k.debit} interchange={k.zerlegung.interchange ?? 0} netzwerk={k.zerlegung.netzwerk ?? 0} txFix={k.txFix} quelle={k.zerlegung.quelle} />
-          </Reveal>
-        </Section>
-      )}
-
       {p.bausteine.preisliste && (
-        <Section label="Konditionen" sub={`Auszug, Stand ${dateDE(k.stand)}.`}>
+        <Section label="Konditionen" sub={`Höchstsätze, Stand ${dateDE(k.stand)}.`}>
           <Reveal>
             <PriceList k={k} />
           </Reveal>
           <Link className="link" href="/konditionen">
-            Vollständige Preisliste <Arrow />
+            Konditionen und Rechner <Arrow />
           </Link>
         </Section>
       )}
@@ -212,9 +199,9 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
       )}
 
       {p.preisliste.length > 0 && !isTelefonie && (
-        <Section label="Preise" sub="Richtwerte, verbindlich ist die Offerte.">
+        <Section label="Konditionen" sub="Verbindlich ist die Offerte.">
           <Reveal>
-            <SimplePriceList rows={p.preisliste} caption="Preise exkl. MwSt." />
+            <SimplePriceList rows={p.preisliste} caption="Sätze exkl. MwSt. Den Preis für das Terminal nennen wir in der Offerte." />
           </Reveal>
         </Section>
       )}
@@ -222,7 +209,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
       {p.bausteine.rechner && (
         <Section tone="grey" label="Rechner" sub="Mit Ihren Zahlen, nicht mit unseren.">
           <Reveal>
-            <Calculator stand={dateDE(k.stand)} defaultCluster={clusterForPath(p.pfad)} defaultUmsatzJahr={(p.beispiel.umsatz ?? 25000) * 12} defaultBon={p.beispiel.bon ?? undefined} />
+            <Calculator stand={dateDE(k.stand)} defaultCluster={(p.beispiel.branche as ClusterKey) || clusterForPath(p.pfad)} defaultUmsatzJahr={(p.beispiel.umsatz ?? 25000) * 12} defaultBon={p.beispiel.bon ?? undefined} />
           </Reveal>
         </Section>
       )}
@@ -262,7 +249,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
         </Section>
       )}
       {p.formular === 'praemiencheck' && (
-        <Section tone="grey" label="Prämien-Check" sub="Drei Angaben, Rückmeldung innert zwei Werktagen.">
+        <Section tone="grey" label="Prämien-Check" sub="Drei Angaben, unser Partner meldet sich bei Ihnen.">
           <PraemienCheck />
         </Section>
       )}

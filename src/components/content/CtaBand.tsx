@@ -3,7 +3,7 @@ import { Reveal } from '@/components/motion/Reveal';
 
 export function CtaBand({
   title = 'Offerte innert 24 Stunden.',
-  text = 'Schicken Sie uns Ihre letzte Abrechnung oder rufen Sie an. Auf Wunsch kommen wir direkt vorbei.',
+  text = 'Schicken Sie uns Ihre letzte Abrechnung oder rufen Sie an. Antwort an Werktagen, auf Wunsch kommen wir vorbei.',
   label = 'Offerte anfordern',
   href = '/kontakt',
   phone,

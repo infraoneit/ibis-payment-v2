@@ -8,7 +8,7 @@ export function DankeText() {
     f === 'abrechnung'
       ? 'Ihre Abrechnung ist angekommen. Den Vergleich mit denselben Umsätzen erhalten Sie innert 24 Stunden an Werktagen.'
       : f === 'webdesign'
-        ? 'Ihre Webdesign-Anfrage ist bei unserem Partner InfraOne IT Solutions in Winterthur angekommen. InfraOne meldet sich am nächsten Werktag.'
-        : 'Ihre Anfrage ist angekommen. Wir melden uns am nächsten Werktag.';
+        ? 'Ihre Webdesign-Anfrage ist bei unserem Partner InfraOne IT Solutions in Winterthur angekommen. InfraOne meldet sich bei Ihnen.'
+        : 'Ihre Anfrage ist angekommen. Wir melden uns innert 24 Stunden an Werktagen.';
   return <p className="lead">{text}</p>;
 }

@@ -863,3 +863,17 @@ a.svc:hover .arrow { background: var(--ink); color: var(--bg); border-color: var
 .social svg { width: 20px; height: 20px; flex: none; }
 .social.with-label { margin-top: 0; }
 .social.with-label a { padding: 0 16px 0 13px; font-size: 0.95rem; font-weight: 500; }
+
+/* Terminal-Kachel: Verweis statt Preis */
+.devcard .more { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 0.95rem; color: var(--ink); }
+.devcard .more svg { width: 14px; height: 14px; }
+
+/* Drei Aussagen nebeneinander (Über uns, Konditionen) */
+.claims { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.claims > * { display: flex; }
+.claim { flex: 1; display: grid; gap: 10px; align-content: start; padding-top: 22px; border-top: 1px solid var(--line-2); }
+.claim h3 { font-size: 1.35rem; }
+.claim p { color: var(--text-2); }
+.dark .claim { border-top-color: var(--on-dark-line); }
+.dark .claim p { color: var(--on-dark-2); }
+@media (max-width: 860px) { .claims { grid-template-columns: minmax(0, 1fr); gap: 22px; } }

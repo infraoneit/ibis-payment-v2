@@ -10,7 +10,7 @@ import { PartnerLogos } from '@/components/content/PartnerLogos';
 
 export const metadata: Metadata = pageMeta({
   title: 'Über uns: wer hinter ibis payment steht',
-  description: 'Ibis Payment GmbH, exklusiver Vertriebspartner der SwiPay AG: Zahlterminals, Kassen und Online-Zahlungen für Schweizer Betriebe. Offene Zahlen, Technik vor Ort.',
+  description: 'Ibis Payment GmbH, Vertriebspartner der SwiPay AG: Zahlterminals, Kassen und Online-Zahlungen für Betriebe in der ganzen Schweiz. Ein fester Ansprechpartner.',
   path: '/ueber-uns',
 });
 
@@ -18,7 +18,7 @@ export default async function UeberUnsPage() {
   const [site, team, refs] = await Promise.all([getSite(), getTeam(), getReferenzen()]);
   return (
     <>
-      <PageHero label="Über uns" title="Wer hinter ibis payment steht." lead="Ein Schweizer Unternehmen, das Zahlungssysteme verkauft, wie es sie selbst kaufen möchte: mit offenen Zahlen, einem Ansprechpartner und Technik, die vor Ort eingerichtet wird." crumbs={[{ name: 'Über uns', href: '/ueber-uns' }]} />
+      <PageHero label="Über uns" title="Wer hinter ibis payment steht." lead="Ein Schweizer Unternehmen, das Zahlungssysteme verkauft, wie es sie selbst kaufen möchte: mit offenen Zahlen, einem festen Ansprechpartner und Begleitung bis zur ersten Zahlung." crumbs={[{ name: 'Über uns', href: '/ueber-uns' }]} />
 
       <Section label="Warum" sub="Weshalb es ibis payment gibt.">
         <Reveal>
@@ -27,20 +27,20 @@ export default async function UeberUnsPage() {
         <div className="claims">
           <Reveal>
             <div className="claim">
-              <h3>Exklusiver Vertriebspartner der SwiPay AG</h3>
-              <p>{site.legalName} vertreibt die Bezahllösungen der SwiPay AG in Baar exklusiv, über rund 30 Vertriebspartner in der ganzen Schweiz. Acquiring über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv, Terminals von PayTec aus Effretikon. Alle Partner mit Support in Landessprachen.</p>
+              <h3>Vertriebspartner der SwiPay AG</h3>
+              <p>{site.legalName} vertreibt die Bezahllösungen der SwiPay AG in Baar, mit einem Netzwerk von rund 30 Vertriebspartnern in der ganzen Schweiz. Acquiring über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv, Terminals von PayTec aus Effretikon. Den Vertrag schliessen Sie mit der SwiPay AG.</p>
             </div>
           </Reveal>
           <Reveal>
             <div className="claim">
-              <h3>Technik vor Ort</h3>
-              <p>Installation, Kassenanbindung und WLAN richten wir in Ihrem Betrieb ein. {site.installation} Für Website, E-Mail und Netzwerk arbeiten wir mit InfraOne IT Solutions aus Winterthur.</p>
+              <h3>Begleitung bis zur Inbetriebnahme</h3>
+              <p>Von der ersten Beratung über die Kassenanbindung bis zur ersten Zahlung begleiten wir Ihr Projekt, in der ganzen Schweiz. Für Website, E-Mail und Netzwerk arbeiten wir mit InfraOne IT Solutions zusammen.</p>
             </div>
           </Reveal>
           <Reveal>
             <div className="claim">
               <h3>Ein Ansprechpartner</h3>
-              <p>Der Berater, der Ihnen die Offerte macht, richtet das Terminal ein und nimmt ab, wenn Sie anrufen. Das ist das ganze Konzept.</p>
+              <p>Wer Ihnen die Offerte macht, bleibt Ihr Ansprechpartner für Technik, Abrechnung und Vertrag. Das ist das ganze Konzept.</p>
             </div>
           </Reveal>
         </div>
@@ -136,7 +136,7 @@ export default async function UeberUnsPage() {
         </Section>
       )}
 
-      <CtaBand title="Lernen wir uns kennen." text="Ein Gespräch vor Ort kostet nichts. Danach wissen Sie, was Sie heute zahlen und was Sie bei uns zahlen würden." phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Lernen wir uns kennen." text="Ein Gespräch kostet nichts. Danach wissen Sie, was Sie heute zahlen und was Sie bei uns zahlen würden." phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

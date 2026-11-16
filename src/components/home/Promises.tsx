@@ -4,11 +4,11 @@ import { Icon } from '@/components/ui/Icons';
 import { Reveal } from '@/components/motion/Reveal';
 
 const CLAIMS = [
-  { icon: <Icon.receipt />, title: 'Jede Gebühr steht in der Offerte. Pro Kartenart, auf einer Seite.', text: 'Interchange, Netzwerkgebühr und unsere Marge sind getrennt ausgewiesen. Was nicht in der Offerte steht, wird nicht verrechnet.' },
-  { icon: <Icon.calculator />, title: 'Wir unterbieten Ihre heutige Abrechnung. Oder sagen Ihnen, dass es nicht geht.', text: 'Schicken Sie uns Ihre letzte Monatsabrechnung. Innert 24 Stunden erhalten Sie den Vergleich mit denselben Umsätzen, Zahl für Zahl.' },
-  { icon: <Icon.phone />, title: 'Sie rufen die Person an, die Ihr Terminal eingerichtet hat.', text: 'Keine Hotline, keine Ticketnummer. Ihr Berater kennt Ihren Betrieb, Ihre Kasse und Ihr Netzwerk, weil er alles selbst installiert hat.' },
-  { icon: <Icon.tools />, title: 'Installation vor Ort, inklusive Kasse, WLAN und Netzwerk.', text: 'Wir richten das Terminal in Ihrem Betrieb ein, binden es an die Kasse an und schulen Ihr Team. Das Terminal kommt nicht per Post.' },
-  { icon: <Icon.swap />, title: 'Monatlich kündbar. Keine Aufschaltgebühr, keine Mindestgebühr.', text: 'Sie bleiben, weil es passt, nicht weil ein Vertrag Sie hält. Wer wenig Umsatz hat, zahlt wenig; wer wechselt, zahlt nichts für den Wechsel.' },
+  { icon: <Icon.receipt />, title: 'Jede Gebühr steht in der Offerte. Pro Kartenart.', text: 'Interchange, Scheme Fee und Acquiring-Gebühr sind getrennt ausgewiesen. Keine versteckten Kosten, keine unklaren Positionen.' },
+  { icon: <Icon.calculator />, title: 'Wir unterbieten Ihre heutige Abrechnung. Oder sagen Ihnen, dass es nicht geht.', text: 'Schicken Sie uns Ihre letzte Monatsabrechnung. Innert 24 Stunden an Werktagen erhalten Sie den Vergleich mit denselben Umsätzen, Zahl für Zahl.' },
+  { icon: <Icon.phone />, title: 'Ein Ansprechpartner für alles.', text: 'Vom ersten Gespräch bis zum laufenden Betrieb haben Sie dieselbe Person am Telefon: für Abrechnung, Technik und Vertrag.' },
+  { icon: <Icon.tools />, title: 'Wir begleiten Sie bis zur ersten Zahlung.', text: 'Terminal, Kassenanbindung und Ihr Team: Wir sind von der ersten Beratung bis zur Inbetriebnahme dabei, in der ganzen Schweiz.' },
+  { icon: <Icon.clock />, title: 'Im Normalfall in 72 Stunden startklar.', text: 'Sobald der Vertrag und alle Unterlagen bei SwiPay sind, dauert es im Normalfall 72 Stunden, bis Sie die erste Karte annehmen.' },
 ];
 
 /** Fünf Versprechen als Timeline mit Icons. */
@@ -16,7 +16,7 @@ export function Promises() {
   return (
     <Section id="versprechen" label="Versprechen" sub="Fünf Sätze, an denen Sie uns messen können.">
       <Reveal>
-        <Intro title="Was wir zusagen, steht hier. Nicht im Kleingedruckten." />
+        <Intro title="Was wir zusagen, steht hier. Offen und nachprüfbar." />
       </Reveal>
       <Timeline items={CLAIMS} />
     </Section>

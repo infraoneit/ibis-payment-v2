@@ -6,7 +6,7 @@ import { submitForm, isEmail, FormGuardError, HONEYPOT } from '@/lib/forms';
 const BRANCHEN = ['Restaurant, Café, Bar', 'Detailhandel, Laden', 'Coiffeur, Kosmetik', 'Praxis, Gesundheit', 'Handwerk, Bau', 'Dienstleistung, Büro', 'Andere'];
 const MA = ['Nur ich', '2 bis 5', '6 bis 15', '16 bis 50', 'mehr als 50'];
 
-/** Prämien-Check: drei Angaben, Rückmeldung des Versicherungspartners innert zwei Werktagen. */
+/** Prämien-Check: drei Angaben, Rückmeldung durch den Versicherungspartner. */
 export function PraemienCheck() {
   const [branche, setBranche] = useState(BRANCHEN[0]);
   const [ma, setMa] = useState(MA[0]);
@@ -32,7 +32,7 @@ export function PraemienCheck() {
     items.push('Cyber');
     try {
       await submitForm('praemiencheck', form);
-      setResult(`Danke. Unser Versicherungspartner meldet sich innert zwei Werktagen und prüft: ${items.join(', ')}.`);
+      setResult(`Danke. Unser Versicherungspartner meldet sich bei Ihnen und prüft: ${items.join(', ')}.`);
     } catch (e) {
       setErr(e instanceof FormGuardError ? e.message : 'Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.');
     }
@@ -42,7 +42,7 @@ export function PraemienCheck() {
   return (
     <div className="panel" id="praemiencheck">
       <h3>Prämien-Check</h3>
-      <p>Die meisten Betriebe haben ihre Policen seit Jahren nicht angeschaut. Drei Angaben, und unser Partner prüft Ihre Prämien innert zwei Werktagen.</p>
+      <p>Die meisten Betriebe haben ihre Policen seit Jahren nicht angeschaut. Drei Angaben, und unser Partner prüft Ihre Prämien.</p>
       {result ? (
         <p className="sent" role="status">
           {result}

@@ -15,45 +15,46 @@ intro: |
 sections:
   - heading: 'Issuer und Kartennetzwerk: Autorisierung und Regeln'
     body: |
-      Der Issuer ist die Bank des Kunden. Er gibt die Karte aus, führt das Konto und entscheidet bei jeder Zahlung innert Sekunden, ob sie autorisiert wird. Er trägt das Risiko, dass der Kunde nicht zahlt, und er ist die Stelle, bei der ein Karteninhaber eine Zahlung beanstandet. Sein Kostenanteil ist die Interchange-Gebühr; in der Schweiz legt die Wettbewerbskommission für Inlandkarten die Obergrenzen fest, etwa 0.12 % für Debit Mastercard am Verkaufspunkt und 0.44 % für Kreditkarten. Für den Betrieb ist der Issuer nie Ansprechpartner. Wird eine Karte abgelehnt, kann nur der Kunde bei seiner Bank nachfragen.
+      Der Issuer ist die Bank des Kunden. Er gibt die Karte aus, führt das Konto und entscheidet bei jeder Zahlung innert Sekunden, ob sie autorisiert wird. Er trägt das Risiko, dass der Kunde nicht zahlt, und er ist die Stelle, bei der ein Karteninhaber eine Zahlung beanstandet. Sein Kostenanteil ist die Interchange-Gebühr. In der Schweiz legt die Wettbewerbskommission für Inlandkarten Obergrenzen fest; die Sätze mit Quelle stehen unter [Kartenzahlung Gebühren Schweiz](/wissen/kartenzahlung-gebuehren-schweiz). Für den Betrieb ist der Issuer nie Ansprechpartner. Wird eine Karte abgelehnt, kann nur der Kunde bei seiner Bank nachfragen.
 
-      Visa, Mastercard und American Express betreiben die Netzwerke, über die Autorisierung und Abrechnung laufen. Sie setzen die Regeln für alle Beteiligten: Sicherheitsanforderungen an Terminals, Fristen für Chargebacks, Haftung, Zulassungen. Dass viele ältere Terminals voraussichtlich ab 2027 die Zulassung verlieren, geht auf neue Sicherheitsanforderungen der Kartenorganisationen zurück. Ihr Kostenanteil ist die Netzwerk- oder Scheme-Gebühr. Der Betrieb hat mit dem Netzwerk keinen Vertrag und keinen Kontakt. TWINT ist ein eigenes System ausserhalb dieser Netzwerke, mit eigenen Regeln und eigener Gebühr.
+      Visa, Mastercard und American Express betreiben die Netzwerke, über die Autorisierung und Abrechnung laufen. Sie setzen die Regeln für alle Beteiligten: Sicherheitsanforderungen an Terminals, Fristen für Chargebacks, Haftung, Zulassungen. Dass viele ältere Terminals voraussichtlich ab 2027 die Zulassung verlieren, geht auf neue Sicherheitsanforderungen der Kartenorganisationen zurück. Ihr Kostenanteil ist die Scheme Fee, auch Netzwerkgebühr genannt. Der Betrieb hat mit dem Netzwerk keinen Vertrag und keinen Kontakt. TWINT ist ein eigenes System ausserhalb dieser Netzwerke, mit eigenen Regeln und eigener Gebühr.
   - heading: Der Acquirer wickelt ab, zahlt aus und trägt das Risiko
     body: |
-      Der Acquirer ist der Vertragspartner des Betriebs für die Annahme von Karten. Er nimmt die Zahlung vom Terminal entgegen, holt die Autorisierung beim Issuer, rechnet mit den Netzwerken ab und zahlt den Betrag an den Betrieb aus. Er trägt das Risiko gegenüber dem Netzwerk, wenn ein Betrieb Zahlungen nicht liefert oder Chargebacks nicht bedient.
+      Der Acquirer nimmt für den Betrieb Kartenzahlungen an. Er nimmt die Zahlung vom Terminal entgegen, holt die Autorisierung beim Issuer, rechnet mit den Netzwerken ab und zahlt den Betrag an den Betrieb aus. Er trägt das Risiko gegenüber dem Netzwerk, wenn ein Betrieb Zahlungen nicht liefert oder Chargebacks nicht bedient.
 
-      Sein Kostenanteil ist die Acquiring-Marge, der einzige Teil der Gebühr, der zwischen Anbietern unterschiedlich ist. Für den Betrieb ist der Acquirer zuständig bei allem, was mit Geld zu tun hat: Gutschrift, Abrechnung, Chargeback, Gebührenhöhe. Im SwiPay-Bezahlnetzwerk ist das TeleCash/Fiserv.
+      Sein Kostenanteil ist die Acquiring-Gebühr, der einzige Teil der Gebühr, der zwischen Anbietern unterschiedlich ist. Der Acquirer ist zuständig bei allem, was mit Geld zu tun hat: Gutschrift, Abrechnung, Chargeback, Gebührenhöhe. Im SwiPay-Bezahlnetzwerk ist das TeleCash/Fiserv. Den Vertrag schliesst der Betrieb mit der SwiPay AG; die Auszahlung erfolgt in Schweizer Franken auf das Geschäftskonto.
   - heading: Terminal-Anbieter und Kassenanbieter liefern die Technik vor Ort
     body: |
-      Der Terminal-Anbieter liefert, installiert und wartet das Terminal. In der Schweiz gilt dafür der Standard ep2; die Terminals von PayTec sind ep2-zertifiziert. Der Terminal-Anbieter ist zuständig, wenn das Terminal nicht startet, keine Verbindung hat, die Software veraltet ist oder ein Ersatzgerät gebraucht wird.
+      Der Terminal-Anbieter liefert, installiert und wartet das Terminal. In der Schweiz gilt dafür der Standard ep2; die Terminals von PayTec sind ep2-zertifiziert. Der Terminal-Anbieter ist zuständig, wenn das Terminal nicht startet, keine Verbindung hat, die Software veraltet ist oder das Gerät ersetzt werden muss.
 
-      Der Kassenanbieter liefert die Software, die Artikel, Tische und Beträge verwaltet. Die Verbindung zum Terminal läuft über ein Protokoll, in der Schweiz OPI, ZVT oder KIT. Kommt der Betrag nicht von der Kasse ans Terminal, liegt der Fehler auf dieser Schnittstelle, und beide Anbieter müssen zusammen hinschauen. Darum hilft es, wenn ein einziger Berater beide Seiten kennt und die Installation selbst gemacht hat.
+      Der Kassenanbieter liefert die Software, die Artikel, Tische und Beträge verwaltet. Die Verbindung zum Terminal läuft über ein Protokoll, in der Schweiz OPI, ZVT oder KIT. Kommt der Betrag nicht von der Kasse ans Terminal, liegt der Fehler auf dieser Schnittstelle, und beide Anbieter müssen zusammen hinschauen. Darum hilft es, wenn ein Ansprechpartner beide Seiten kennt und die Inbetriebnahme begleitet hat.
   - heading: 'PSP und Payment Broker: Verbindung und Vermittlung'
     body: |
       Ein Payment Service Provider ist ein technischer Dienstleister. Er verbindet Terminals oder Online-Shops mit einem oder mehreren Acquirern, bündelt Zahlungsmethoden und stellt die Schnittstellen bereit. Im Online-Handel ist der PSP das Gateway, über das der Shop Kartenzahlungen, TWINT und PostFinance annimmt; bei uns ist das Planet/Datatrans mit über 40 Zahlungsmethoden und 14 Shop-Plugins. Der PSP ist zuständig, wenn eine Zahlungsmethode fehlt, die Schnittstelle Fehler meldet oder die Shop-Anbindung nicht funktioniert. Er zahlt nicht aus, das bleibt beim Acquirer.
 
-      Ein Payment Broker betreibt keine eigene Plattform. Er kennt den Markt, ordnet Angebote ein, vermittelt den Betrieb an einen Acquirer oder PSP und begleitet die Einrichtung. Sein Kostenanteil ist eine Provision des Anbieters oder ein Teil der Marge; ob das transparent ist, zeigt sich daran, ob der Broker sagt, wie er bezahlt wird. Ein Broker ist nicht zuständig für Gutschriften oder Chargebacks, aber er leitet den Fall an die richtige Rolle weiter. Die Abgrenzung steht unter [PSP oder Payment Broker](/wissen/psp-oder-broker).
+      Ein Payment Broker betreibt keine eigene Plattform. Er kennt den Markt, ordnet Angebote ein, vermittelt den Betrieb an einen Acquirer oder PSP und begleitet die Einrichtung. Bezahlt wird er über eine Provision des Anbieters oder ein Honorar des Betriebs; ob das transparent ist, zeigt sich daran, ob der Broker sagt, wie er bezahlt wird. Ein Broker ist nicht zuständig für Gutschriften oder Chargebacks, aber er leitet den Fall an die richtige Rolle weiter. Die Abgrenzung steht unter [PSP oder Payment Broker](/wissen/psp-oder-broker).
   - heading: Wer bei welchem Problem zuständig ist
     body: |
       Im Alltag hilft eine einfache Zuordnung:
 
-      - Terminal startet nicht, hat keine Verbindung oder druckt nicht: Terminal-Anbieter. Bei uns der Berater über die Direktwahl, Ersatzgerät in der Miete inbegriffen.
+      - Terminal startet nicht, hat keine Verbindung oder druckt nicht: Terminal-Anbieter. Bei uns melden Sie sich bei Ihrem festen Ansprechpartner.
       - Betrag kommt nicht von der Kasse ans Terminal: Schnittstelle zwischen Kasse und Terminal, Kassenanbieter und Terminal-Anbieter gemeinsam.
-      - Gutschrift fehlt oder stimmt nicht mit dem Tagesabschluss überein: Acquirer. Ihr Berater prüft die Transaktionen, das Geld bewegt der Acquirer.
+      - Gutschrift fehlt oder stimmt nicht mit dem Tagesabschluss überein: Acquirer. Ihr Ansprechpartner klärt den Fall, das Geld bewegt der Acquirer.
       - Chargeback, ein Kunde bestreitet eine Zahlung bei seiner Bank: Acquirer, mit Belegen des Betriebs. Der Issuer entscheidet nach den Netzwerkregeln.
       - Gebühr auf der Abrechnung stimmt nicht mit der Offerte überein: Acquirer beziehungsweise der Vertriebspartner, der die Offerte gestellt hat.
       - Karte wird abgelehnt, obwohl das Terminal funktioniert: Issuer. Der Kunde fragt bei seiner Bank nach, der Betrieb kann nichts tun.
       - Zahlungsmethode fehlt im Online-Shop: PSP. Fehlt sie am Terminal: Terminal-Anbieter.
 
-      Wer das weiss, ruft beim ersten Mal die richtige Stelle an. Mehr dazu unter [Support](/support).
+      Wer das weiss, wendet sich beim ersten Mal an die richtige Stelle. Mehr dazu unter [Support](/support).
   - heading: Wo ibis payment in der Kette steht
     body: |
-      ibis payment ist Vertriebspartner der SwiPay AG und damit der Berater, der Terminal, Kassenanbindung und Konditionen aus einer Hand liefert. Das Acquiring läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer; dort liegen Auszahlung und Risiko. Die Terminals kommen von PayTec und sind ep2-zertifiziert. Online-Zahlungen laufen über das Gateway Planet/Datatrans.
+      ibis payment ist Vertriebspartner der SwiPay AG für Payment- und Kassensysteme in der ganzen Schweiz. Wir beraten, vermitteln und begleiten Sie von der ersten Beratung bis zur Inbetriebnahme. Den Vertrag schliessen Sie mit der SwiPay AG. Das Acquiring läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer; dort liegen Auszahlung und Risiko. Die Terminals kommen von PayTec und sind ep2-zertifiziert. Online-Zahlungen laufen über das Gateway Planet/Datatrans.
 
-      Für den Betrieb heisst das: Ein Berater mit Direktwahl, der das Terminal selbst installiert hat, ist Ansprechpartner für alle Rollen. Er löst, was in seiner Rolle liegt, und leitet an Acquirer oder PSP weiter, was dort liegt. Die Gebühren sind in der Offerte nach Interchange, Netzwerkgebühr und Marge ausgewiesen, siehe [Konditionen](/konditionen). Wer wissen will, welches Modell zu seinem Betrieb passt, meldet sich über [Kontakt](/kontakt).
+      Für den Betrieb heisst das: Ein fester Ansprechpartner ist für alle Themen da. Er löst, was in seiner Rolle liegt, und leitet an Acquirer oder PSP weiter, was dort liegt. Die Gebühr besteht aus Interchange, Scheme Fee und Acquiring-Gebühr; die genauen Sätze stehen in der Offerte, siehe [Konditionen](/konditionen). Wer wissen will, welches Modell zu seinem Betrieb passt, meldet sich über [Kontakt](/kontakt).
 beispiel:
   aktiv: false
   titel: Keine Beispielrechnung
+  branche: sonstige
   umsatz: 25000
   bon: 45
   kreditanteil: 35
@@ -63,10 +64,10 @@ preisliste: []
 faq:
   - frage: Was ist der Unterschied zwischen Acquirer und Issuer?
     antwort: |
-      Der Issuer ist die Bank des Kunden, die die Karte ausgibt und die Zahlung autorisiert. Der Acquirer ist der Vertragspartner des Betriebs, der die Zahlung abwickelt, das Geld auszahlt und das Risiko trägt. Beide erhalten einen Teil der Gebühr: der Issuer die Interchange, der Acquirer die Marge.
+      Der Issuer ist die Bank des Kunden, die die Karte ausgibt und die Zahlung autorisiert. Der Acquirer wickelt die Zahlung für den Betrieb ab, zahlt das Geld aus und trägt das Risiko. Beide erhalten einen Teil der Gebühr: der Issuer die Interchange, der Acquirer die Acquiring-Gebühr.
   - frage: Wen rufe ich an, wenn die Gutschrift fehlt?
     antwort: |
-      Den Acquirer, weil er das Geld bewegt. Bei uns rufen Sie Ihren Berater an, der die Transaktionen prüft und den Fall an den Acquirer TeleCash/Fiserv weiterleitet, wenn es dort liegt.
+      Zuständig ist der Acquirer, weil er das Geld bewegt. Bei uns melden Sie sich bei Ihrem festen Ansprechpartner. Er klärt den Fall und leitet ihn an den Acquirer TeleCash/Fiserv weiter, wenn es dort liegt.
   - frage: Was passiert bei einem Chargeback?
     antwort: |
       Der Kunde bestreitet die Zahlung bei seinem Issuer. Der Acquirer fordert vom Betrieb Belege an, etwa den Zahlungsbeleg oder die Lieferbestätigung, und legt sie dem Issuer vor. Entschieden wird nach den Regeln des Kartennetzwerks. Bewahren Sie Belege deshalb auf.
@@ -75,7 +76,7 @@ faq:
       Für Terminals am Verkaufspunkt nicht als separaten Vertrag, die technische Verbindung ist im Angebot enthalten. Für einen Online-Shop ja, dort ist der PSP das Gateway, das die Zahlungsmethoden bündelt. Bei uns ist das Planet/Datatrans.
   - frage: Ist ibis payment ein Acquirer?
     antwort: |
-      Nein. ibis payment ist Vertriebspartner der SwiPay AG. Das Acquiring läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer. Für Sie ist der Berater von ibis payment die Anlaufstelle, der die Rollen dahinter kennt.
+      Nein. ibis payment ist Vertriebspartner der SwiPay AG. Das Acquiring läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer, den Vertrag schliessen Sie mit der SwiPay AG. Für Sie ist der Ansprechpartner von ibis payment die Anlaufstelle, der die Rollen dahinter kennt.
 bausteine:
   rechner: false
   geraete: false
@@ -84,7 +85,7 @@ bausteine:
 formular: none
 cta:
   titel: Ein Ansprechpartner für alle Rollen.
-  text: Beschreiben Sie uns Ihren Betrieb. Wir sagen Ihnen, welche Rollen Sie brauchen und was jede davon kostet.
+  text: Beschreiben Sie uns Ihren Betrieb. Wir sagen Ihnen, welche Rollen Sie brauchen und wer wofür zuständig ist.
   label: Konditionen ansehen
   href: /konditionen
 verwandt:

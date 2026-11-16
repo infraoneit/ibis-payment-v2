@@ -47,7 +47,7 @@ export default async function OnlinePage() {
           </div>
           <div>
             <span>Preis</span>
-            <span>Online-Gebühren werden pro Zahlungsmethode offeriert [Online-Konditionen eintragen]. Terminal-Konditionen: <Link href="/konditionen">Konditionen</Link>.</span>
+            <span>Online-Gebühren werden pro Zahlungsmethode offeriert und stehen in der Offerte. Höchstsätze für Karten am Terminal: <Link href="/konditionen">Konditionen</Link>.</span>
           </div>
         </div>
       </Section>
@@ -56,7 +56,7 @@ export default async function OnlinePage() {
         <Faq items={faq} />
       </Section>
 
-      <CtaBand title="Webshop anbinden? Wir klären die Integration." text="Sagen Sie uns, welches Shop-System Sie nutzen oder planen. Die Offerte erhalten Sie innert 24 Stunden." phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Webshop anbinden? Wir klären die Integration." text="Sagen Sie uns, welches Shop-System Sie nutzen oder planen. Die Offerte erhalten Sie innert 24 Stunden an Werktagen." phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

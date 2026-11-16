@@ -14,7 +14,7 @@ export default async function DankePage() {
   return (
     <>
       <PageHero label="Danke" title="Angekommen.">
-        <Suspense fallback={<p className="lead">Ihre Anfrage ist angekommen. Wir melden uns am nächsten Werktag.</p>}>
+        <Suspense fallback={<p className="lead">Ihre Anfrage ist angekommen. Wir melden uns innert 24 Stunden an Werktagen.</p>}>
           <DankeText />
         </Suspense>
       </PageHero>

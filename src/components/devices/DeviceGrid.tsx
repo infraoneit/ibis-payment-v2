@@ -2,7 +2,6 @@ import { DeviceMini, TiltCard, type MiniKind } from './DeviceMini';
 import { DevicePhoto, PHOTO_BY_KIND } from './DevicePhoto';
 import { Reveal } from '@/components/motion/Reveal';
 import Link from 'next/link';
-import { chf } from '@/lib/format';
 import { tilePlan } from '@/lib/tiles';
 import { Arrow } from '@/components/layout/Section';
 import type { Geraet } from '@/lib/content';
@@ -35,16 +34,9 @@ export function DeviceGrid({ geraete }: { geraete: Geraet[] }) {
               <h3>{g.name}</h3>
             </div>
             <p>{g.kurz}</p>
-            <div className="pr num">
-              {g.mieteMonat != null ? (
-                <>
-                  {chf(g.mieteMonat, 2)} <small>/ Monat</small>
-                  {g.kauf != null && <small> · Kauf {chf(g.kauf)}</small>}
-                </>
-              ) : (
-                'Offerte pro Projekt'
-              )}
-            </div>
+            <span className="more">
+              Daten ansehen <Arrow />
+            </span>
           </TiltCard>
         </Reveal>
       ))}

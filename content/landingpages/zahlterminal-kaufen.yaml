@@ -1,102 +1,103 @@
-title: Zahlterminal kaufen ab CHF 390
+title: 'Zahlterminal kaufen: wann es sich lohnt'
 pfad: /zahlterminal-kaufen
 cluster: payment
 navTitle: Terminal kaufen
-metaTitle: Zahlterminal kaufen ab CHF 390 | ibis payment
-metaDescription: 'Zahlterminal kaufen ab CHF 390 mit Garantie und Installation vor Ort. Wann sich der Kauf gegenüber der Miete lohnt, was inbegriffen ist und was nicht.'
+metaTitle: 'Zahlterminal kaufen: wann es sich lohnt | ibis payment'
+metaDescription: 'Zahlterminal kaufen: für wen sich der Kauf gegenüber der Miete lohnt, welche Risiken beim Besitzer liegen und welche Fragen Sie an die Offerte stellen.'
 kicker: Kaufen
-lead: Beim Kauf gehört das Terminal Ihnen. Installation vor Ort ist trotzdem inbegriffen, und die Gebühren pro Zahlung sind dieselben wie bei der Miete.
+lead: Beim Kauf gehört das Terminal Ihnen. Das lohnt sich, wenn Sie es über Jahre am selben Ort nutzen. Den Kaufpreis nennen wir in der Offerte, neben der Miete für dasselbe Modell.
 intro: |
-  Ein Terminal zu kaufen lohnt sich für Betriebe, die an einem festen Standort über Jahre dasselbe Terminal nutzen. Sie zahlen einmal statt jeden Monat, danach bleibt nur die Gebühr pro Zahlung. Die Kaufpreise beginnen bei CHF 390, exkl. MwSt., mit zwei Jahren Garantie [Garantiedauer bestätigen].
+  Ein Terminal zu kaufen lohnt sich für Betriebe, die an einem festen Standort über Jahre dasselbe Terminal nutzen. Sie zahlen einmal statt jeden Monat, danach bleibt die Gebühr pro Zahlung. Den Kaufpreis nennen wir nicht auf der Website. Er steht in Ihrer Offerte, zusammen mit der Miete, damit Sie beide Varianten nebeneinander sehen.
 
-  Wer kauft, sollte zwei Dinge wissen. Reparaturen nach Ablauf der Garantie gehen auf eigene Rechnung, und das Risiko der Zulassung ab 2027 liegt beim Besitzer. Beides lässt sich mit der Modellwahl klein halten. Die Gebühren pro Zahlung stehen auf der Seite [Konditionen](/konditionen).
+  Wer kauft, sollte zwei Dinge wissen. Was ausserhalb der Garantie kaputtgeht, geht auf eigene Rechnung, und das Risiko der Zulassung ab 2027 liegt beim Besitzer. Beides lässt sich mit der Modellwahl klein halten. Die Höchstsätze für die Gebühren pro Zahlung stehen auf der Seite [Konditionen](/konditionen).
 sections:
-  - heading: Kaufpreise der Terminals
+  - heading: Diese Terminals können Sie kaufen
     body: |
-      Die Preise gelten für die Terminals von PayTec, die wir vermitteln, alle exkl. MwSt.
+      Wir vermitteln Terminals von PayTec. Welches Modell passt, hängt davon ab, wo bezahlt wird.
 
-      - [PayTec N62](/geraete/paytec-n62), mobil, kompakt, ohne Drucker, Beleg per QR, SMS oder E-Mail: CHF 390.
-      - [PayTec V3CT3](/geraete/paytec-v3ct3), stationäres Tischterminal mit Tastatur und Drucker, für Betriebe ohne Kasse: CHF 390.
-      - [PayTec N86](/geraete/paytec-n86), mobil mit Drucker, Sturzschutz aus 1.5 Metern: CHF 590.
-      - [PayTec N96](/geraete/paytec-n96), mobil mit Drucker, 6.5-Zoll-Display, 18 Tage Standby: CHF 590.
-      - [PayTec CT20P](/geraete/paytec-ct20p), stationär, kassenintegriert, mit physischem PIN-Pad: CHF 590.
+      - [PayTec N62](/geraete/paytec-n62), mobil, kompakt, ohne Drucker, Beleg per QR, SMS oder E-Mail.
+      - [PayTec V3CT3](/geraete/paytec-v3ct3), stationäres Tischterminal mit Tastatur und Drucker, für Betriebe ohne Kasse.
+      - [PayTec N86](/geraete/paytec-n86), mobil mit Drucker, Sturzschutz aus 1.5 Metern.
+      - [PayTec N96](/geraete/paytec-n96), mobil mit Drucker, 6.5-Zoll-Display, 18 Tage Standby.
+      - [PayTec CT20P](/geraete/paytec-ct20p), stationär, kassenintegriert, mit physischem PIN-Pad.
 
-      Automatenterminals wie der [PayTec UN20](/geraete/paytec-un20) und der [PayTec N62 Vending](/geraete/paytec-n62-vending) werden pro Projekt offeriert, weil Einbau und Anbindung je nach Automat verschieden sind.
-
-      Bei einem Defekt innerhalb der Garantie wird das Terminal repariert oder ersetzt. Zubehör wie das Kunden-Pinpad P200 für den V3CT3 steht in der Offerte [Zubehörpreise eintragen].
-  - heading: Was beim Kauf trotzdem inbegriffen ist
+      Den Kaufpreis je Modell nennen wir in der Offerte, ebenso den Preis für Zubehör wie das Kunden-Pinpad P200 zum V3CT3. Automatenterminals wie der [PayTec UN20](/geraete/paytec-un20) und der [PayTec N62 Vending](/geraete/paytec-n62-vending) werden pro Projekt offeriert, weil Einbau und Anbindung je nach Automat verschieden sind.
+  - heading: Was beim Kauf gleich bleibt wie bei der Miete
     body: |
-      Der Kaufpreis ist nicht der ganze Service. Was Sie beim Kauf gleich bekommen wie bei der Miete:
+      Mit dem Kauf ändert sich, wem das Terminal gehört. Die Abwicklung der Zahlungen bleibt dieselbe:
 
-      - Aufschaltung und Installation vor Ort für CHF 0, inklusive Kassenanbindung über OPI, ZVT oder KIT und Einrichtung der WLAN-Verbindung.
+      - ibis begleitet Sie von der Beratung bis zur Inbetriebnahme: Kassenanbindung über OPI, ZVT oder KIT, WLAN, Testzahlung.
       - Einweisung für Ihr Team: Trinkgeld, Storno, Tagesabschluss, Beleg.
-      - Ein Berater mit Direktwahl, der das Terminal selbst installiert hat.
-      - Gutschrift am nächsten Werktag und eine Abrechnung pro Monat auf einer Seite.
+      - Ein fester Ansprechpartner für alle Themen, vom Terminal bis zur Abrechnung.
+      - Gutschrift in Schweizer Franken auf Ihr Geschäftskonto. Die Abrechnung zeigt, über welchen Kanal die Umsätze kamen.
 
-      Die Gebühren pro Zahlung sind bei Kauf und Miete gleich: Debitkarten Inland 0.75 %, Kreditkarten Inland 1.25 %, TWINT 1.00 %, American Express 1.90 %, plus CHF 0.05 pro Zahlung. Es gibt keine Mindestgebühr und keine Mindestlaufzeit für den Acquiring-Vertrag.
+      Die Gebühren pro Zahlung fallen bei Kauf und Miete an. Auf Debitkarten sind es höchstens 0.85 %, auf Kreditkarten höchstens 1.5 %; die genauen Sätze hängen von Umsatz und Kartenmix ab und stehen in Ihrer Offerte. Auch ein gekauftes Terminal braucht einen Vertrag für die Abwicklung. Den schliessen Sie mit der SwiPay AG. Laufzeit und Kündigung stehen dort, wir zeigen sie Ihnen vor der Unterschrift.
 
-      Nicht enthalten sind laufende Wartung und das Ersatzgerät ausserhalb der Garantie. Beides lässt sich als Service dazubuchen [Preis Wartungsvertrag eintragen oder Position streichen].
+      Anders als bei der Miete liegt die Verantwortung für das Terminal bei Ihnen. Fragen Sie in der Offerte nach, wie Wartung, Updates und ein Defekt ausserhalb der Garantie geregelt sind.
   - heading: Ab wann sich der Kauf gegenüber der Miete lohnt
     body: |
-      Als Faustregel ab etwa zwei Jahren Nutzung. Davor ist die Miete günstiger, weil sie Wartung, Updates und Ersatz einschliesst und sich monatlich beenden lässt. Danach zahlt der Mieter weiter, der Käufer nicht mehr.
+      Je länger Sie dasselbe Terminal nutzen, desto eher lohnt sich der Kauf. Die Miete läuft weiter, solange das Terminal im Einsatz ist; der Kaufpreis fällt einmal an. Ab welchem Zeitpunkt der Kauf günstiger ist, hängt von den beiden Preisen ab. Sie stehen in der Offerte nebeneinander.
 
-      Die Faustregel gilt unter drei Bedingungen. Der Standort ist fest und der Ablauf ändert sich nicht; wer in zwei Jahren von Tresen auf Service am Tisch umstellt, braucht ein anderes Modell. Der Betrieb läuft stabil; wer gerade gründet oder die Saison nicht überblickt, fährt mit der Miete besser, siehe [Zahlterminal mieten](/zahlterminal-mieten). Und Sie tragen das Risiko für Defekt und Nachrüstung nach der Garantie selbst.
+      Der Kauf passt unter drei Bedingungen. Der Standort ist fest und der Ablauf ändert sich nicht; wer später von Tresen auf Service am Tisch umstellt, braucht ein anderes Modell. Der Betrieb läuft stabil; wer gerade gründet oder die Saison nicht überblickt, fährt mit der Miete besser, siehe [Zahlterminal mieten](/zahlterminal-mieten). Und Sie sind bereit, das Risiko für Defekt und Nachrüstung selbst zu tragen.
 
-      Die Beispielrechnung unten zeigt die Gebühren pro Zahlung für ein Detailhandelsgeschäft. Sie sind bei Kauf und Miete gleich, der Unterschied liegt im Terminalpreis. Wir rechnen Ihnen beide Varianten mit Ihren Zahlen vor, eine Anfrage über [Kontakt](/kontakt) genügt.
+      Drei Fragen an die Offerte helfen bei der Entscheidung. Was kostet dasselbe Modell in Miete und in Kauf. Welche Leistungen stecken in der Miete, die beim Kauf fehlen. Und wie lange läuft die Garantie, und was deckt sie.
+
+      Die Beispielrechnung auf dieser Seite zeigt die Gebühren pro Zahlung für ein Detailhandelsgeschäft. Sie fallen bei Kauf und Miete an; der Unterschied liegt beim Terminal. Eine Anfrage über [Kontakt](/kontakt) genügt, und Sie erhalten beide Varianten in einer Offerte.
   - heading: Risiko Terminalwechsel 2027
     body: |
       Viele ältere Terminals verlieren voraussichtlich ab 2027 die Zulassung, weil die Kartenorganisationen neue Sicherheitsanforderungen stellen. Wer dann ein Terminal besitzt, das sie nicht erfüllt, ersetzt es auf eigene Kosten.
 
-      Darum gilt beim Kauf: nur aktuelle Modelle. Alle Terminals, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert, nach heutigem Stand die Generation, die über 2027 hinaus betrieben werden kann [Stand bei PayTec oder SwiPay bestätigen]. Ein Terminal mit älterer Zertifizierung sollten Sie heute nicht mehr kaufen, auch nicht gebraucht.
+      Darum gilt beim Kauf: nur aktuelle Modelle. Alle Terminals, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert. Ein Terminal mit älterer Zertifizierung sollten Sie heute nicht mehr kaufen, auch nicht gebraucht. Lassen Sie sich beim Kauf schriftlich bestätigen, welchen Standard das Terminal erfüllt.
 
-      Zweiter Punkt: Software-Updates. Auch ein gekauftes Terminal braucht sie, damit es im Netzwerk bleibt. Wie Updates bei Kaufterminals verteilt werden und ob sie etwas kosten, steht in Ihrer Offerte [Update-Regelung eintragen]. Wer das nicht verwalten will, mietet.
+      Zweiter Punkt: Software-Updates. Auch ein gekauftes Terminal braucht sie, damit es im Netzwerk bleibt. Wie Updates bei Kaufterminals verteilt werden, steht in Ihrer Offerte. Wer sich darum nicht kümmern will, mietet.
   - heading: So läuft der Kauf ab
     body: |
-      Sie nennen uns Ihren Betrieb, den Ort, an dem bezahlt wird, und ob eine Kasse angebunden werden soll. Wir empfehlen ein Modell und schicken innert 24 Stunden eine Offerte mit Kaufpreis, Zubehör und Gebühren pro Zahlung, jede Position einzeln.
+      Sie nennen uns Ihren Betrieb, den Ort, an dem bezahlt wird, und ob eine Kasse angebunden werden soll. Wir empfehlen ein Modell. An Werktagen erhalten Sie innert 24 Stunden eine Antwort. In der Offerte stehen Kaufpreis, Miete zum Vergleich, Zubehör und Gebühren pro Zahlung, jede Position einzeln.
 
-      Nach der Unterzeichnung wird das Terminal konfiguriert und für Ihren Acquiring-Vertrag freigeschaltet. Ihr Berater installiert es vor Ort, bindet die Kasse an, prüft das WLAN und macht mit Ihnen eine Testzahlung. Haben Sie noch ein altes Terminal, übernehmen wir die Kündigung beim bisherigen Anbieter und legen die Installation auf den Stichtag.
+      Den Vertrag für die Abwicklung schliessen Sie mit der SwiPay AG. Ab Eingang des Vertrags dauert es im Normalfall 72 Stunden bis zur ersten Zahlung, sofern alle Unterlagen vorliegen. Ihr Ansprechpartner von ibis begleitet die Inbetriebnahme, bindet die Kasse an, prüft das WLAN und macht mit Ihnen eine Testzahlung. Haben Sie noch ein altes Terminal, prüfen wir mit Ihnen die Kündigungsfrist beim bisherigen Anbieter und legen den Wechsel auf den Stichtag.
 
-      Rechnung und Garantieschein erhalten Sie mit der Installation. Die Modelle im Detail finden Sie unter [Geräte](/geraete), den Vergleich mit anderen Anbietern unter [Zahlterminal Vergleich](/zahlterminal-vergleich).
+      Die Modelle im Detail finden Sie unter [Geräte](/geraete), den Vergleich mit anderen Anbietern unter [Zahlterminal Vergleich](/zahlterminal-vergleich).
 beispiel:
   aktiv: true
   titel: Beispiel Detailhandel
+  branche: retail
   umsatz: 40000
-  bon: 38
+  bon: 85
   kreditanteil: 30
   vergleich: gross
-  erklaerung: Für ein Detailhandelsgeschäft nehmen wir viele Zahlungen mit mittlerem Bon an; die Werte sind Platzhalter und gelten für Kauf und Miete gleich.
+  erklaerung: Der Kartenumsatz ist eine Annahme. Der Durchschnittsbon ist der Branchenwert, mit dem auch der Rechner von SwiPay arbeitet. Mit Ihren eigenen Zahlen rechnet der Rechner genauer.
 preisliste:
-  - label: Kauf N62 oder V3CT3
-    beschreibung: Mobil ohne Drucker oder Tischterminal mit Drucker
-    wert: CHF 390.00
-  - label: Kauf N86, N96 oder CT20P
-    beschreibung: Mobil mit Drucker oder kassenintegriert
-    wert: CHF 590.00
-  - label: Garantie
-    beschreibung: Reparatur oder Ersatz bei Defekt
-    wert: 2 Jahre
-  - label: Einrichtung und Installation vor Ort
-    beschreibung: Inklusive Kassenanbindung und WLAN
-    wert: CHF 0.00
+  - label: Debitkarten
+    beschreibung: Genauer Satz je nach Umsatz und Kartenmix, steht in der Offerte
+    wert: höchstens 0.85 %
+  - label: Kreditkarten
+    beschreibung: Genauer Satz je nach Umsatz und Kartenmix, steht in der Offerte
+    wert: höchstens 1.5 %
+  - label: Terminal, Miete oder Kauf
+    beschreibung: Beide Varianten nebeneinander, mit Preis und Leistungen
+    wert: in der Offerte
+  - label: Laufzeit und Kündigung
+    beschreibung: Wir zeigen sie Ihnen vor der Unterschrift
+    wert: gemäss Vertrag mit SwiPay
 faq:
   - frage: Was kostet ein Zahlterminal im Kauf?
     antwort: |
-      CHF 390 für den N62 oder den V3CT3, CHF 590 für N86, N96 und CT20P, exkl. MwSt. Automatenterminals werden pro Projekt offeriert. Dazu kommen die Gebühren pro Zahlung gemäss [Konditionen](/konditionen), die bei Kauf und Miete gleich sind.
+      Den Kaufpreis nennen wir in der Offerte, nicht auf der Website. Er hängt vom Modell ab; Automatenterminals werden pro Projekt offeriert. In der Offerte steht auch die Miete für dasselbe Modell zum Vergleich. Dazu kommen die Gebühren pro Zahlung: höchstens 0.85 % auf Debitkarten und höchstens 1.5 % auf Kreditkarten. Die genauen Sätze hängen von Umsatz und Kartenmix ab und stehen ebenfalls in der Offerte. Mehr unter [Konditionen](/konditionen).
   - frage: Wie lange ist die Garantie?
     antwort: |
-      Zwei Jahre ab Installation [Garantiedauer bestätigen]. In dieser Zeit wird ein defektes Terminal repariert oder ersetzt. Danach tragen Sie Reparatur oder Ersatz selbst, ausser Sie buchen einen Wartungsservice dazu [Konditionen eintragen].
+      Dauer und Umfang der Garantie stehen in der Offerte. Fragen Sie auch, was sie nicht deckt, etwa Sturz, Flüssigkeit oder Akkuverschleiss. Was ausserhalb der Garantie anfällt, tragen Sie beim Kauf selbst.
   - frage: Muss ich beim Kauf einen Acquiring-Vertrag abschliessen?
     antwort: |
-      Ja. Das Terminal braucht einen Vertrag für die Abwicklung der Zahlungen über das SwiPay-Netzwerk. Dieser Vertrag ist monatlich kündbar und hat keine Mindestgebühr. Das gekaufte Terminal bleibt in jedem Fall Ihr Eigentum.
+      Ja. Das Terminal braucht einen Vertrag für die Abwicklung der Zahlungen über das SwiPay-Netzwerk. Diesen Vertrag schliessen Sie mit der SwiPay AG. Laufzeit und Kündigung stehen dort; wir zeigen sie Ihnen vor der Unterschrift. Das gekaufte Terminal bleibt Ihr Eigentum.
   - frage: Ist das gekaufte Terminal ab 2027 noch zugelassen?
     antwort: |
-      Alle Modelle, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert, also die aktuelle Generation [Stand bestätigen]. Ältere Terminals mit früheren Zertifizierungen sind von der Zulassungsfrage betroffen und sollten nicht mehr gekauft werden.
+      Alle Modelle, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert. Lassen Sie sich den Standard beim Kauf schriftlich bestätigen. Ältere Terminals mit früheren Zertifizierungen sind von der Zulassungsfrage betroffen und sollten nicht mehr gekauft werden.
   - frage: Kann ich ein gekauftes Terminal an eine Kasse anbinden?
     antwort: |
-      Ja. CT20P, N96 und V3CT3 unterstützen die Kassenprotokolle OPI, ZVT oder KIT, je nach Modell. Die Anbindung ist Teil der Installation vor Ort und kostet nichts extra. Welche Kassensysteme wir kennen, steht unter [Kassensysteme](/kassensysteme).
+      Ja. CT20P, N96 und V3CT3 unterstützen die Kassenprotokolle OPI, ZVT oder KIT, je nach Modell. Die Anbindung richten wir bei der Inbetriebnahme ein. Welche Kassensysteme wir kennen, steht unter [Kassensysteme](/kassensysteme).
   - frage: Kann ich zuerst mieten und später kaufen?
     antwort: |
-      Ja. Ob das gemietete Terminal übernommen werden kann und zu welchem Preis, klären wir in der Offerte [Übernahmekonditionen eintragen]. Die Gebühren pro Zahlung ändern sich beim Wechsel nicht.
+      Ob ein gemietetes Terminal übernommen werden kann und zu welchem Preis, klären wir in der Offerte. Fragen Sie danach, wenn Sie diese Möglichkeit offenhalten wollen.
 bausteine:
   rechner: true
   geraete: true
@@ -104,8 +105,8 @@ bausteine:
   preisliste: true
 formular: none
 cta:
-  titel: Offerte innert 24 Stunden.
-  text: Nennen Sie uns Betrieb, Zahlort und Kasse. Sie erhalten Kaufpreis und Gebühren pro Zahlung in einer Offerte.
+  titel: Antwort innert 24 Stunden an Werktagen.
+  text: Nennen Sie uns Betrieb, Zahlort und Kasse. Sie erhalten Kaufpreis, Miete zum Vergleich und Gebühren pro Zahlung in einer Offerte.
   label: Offerte anfordern
   href: /kontakt
 verwandt:

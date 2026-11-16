@@ -36,7 +36,7 @@ export const FOOTER_COLUMNS: NavGroup[] = [
       { label: 'Kontakt', href: '/kontakt' },
       { label: 'Dienstleistungen', href: '/dienstleistungen' },
       { label: 'Hilfecenter SwiPay', href: 'https://swipay.ch/hilfecenter/', external: true },
-      { label: 'Vertragsunterlagen SwiPay', href: 'https://swipay.ch/vertragsunterlagen/', external: true },
+      { label: 'Vertragsunterlagen SwiPay', href: 'https://swipay.ch/hilfecenter/vertragsunterlagen/', external: true },
     ],
   },
   {

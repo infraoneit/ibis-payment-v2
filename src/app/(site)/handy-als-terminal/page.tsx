@@ -18,7 +18,7 @@ export default async function SoftposPage() {
   const [site, faq] = await Promise.all([getSite(), getFaq('softpos')]);
   return (
     <>
-      <PageHero label="Handy als Terminal" title="Das Smartphone wird zum Terminal." lead="Kartenzahlung direkt auf Ihrem Android- oder iOS-Handy, ohne Gerät und ohne Fixkosten. Für den Start, für den Marktstand oder als Reserve, wenn das Terminal ausfällt." crumbs={[{ name: 'Terminals', href: '/geraete' }, { name: 'Handy als Terminal', href: '/handy-als-terminal' }]} />
+      <PageHero label="Handy als Terminal" title="Das Smartphone wird zum Terminal." lead="Kartenzahlung direkt auf Ihrem Android- oder iOS-Handy, ohne zusätzliches Gerät. Für den Start, für den Marktstand oder als Reserve, wenn das Terminal ausfällt." crumbs={[{ name: 'Terminals', href: '/geraete' }, { name: 'Handy als Terminal', href: '/handy-als-terminal' }]} />
 
       <Section label="Für wen" sub="Und für wen nicht.">
         <Reveal>
@@ -27,7 +27,7 @@ export default async function SoftposPage() {
         <div className="facts">
           <div>
             <span>Voraussetzung</span>
-            <span>Android- oder iOS-Smartphone mit NFC, die App, ein Vertrag. Start innert weniger Stunden, keine Lieferung.</span>
+            <span>Android- oder iOS-Smartphone mit NFC, die App, ein Vertrag mit SwiPay. Keine Lieferung, keine Installation: Sie können innert Stunden starten.</span>
           </div>
           <div>
             <span>Akzeptiert</span>
@@ -47,7 +47,7 @@ export default async function SoftposPage() {
           </div>
           <div>
             <span>Preis</span>
-            <span>Keine Miete, keine Fixkosten. Transaktionsgebühren nach <Link href="/konditionen">Konditionen</Link> [SoftPOS-Satz bestätigen].</span>
+            <span>Kein zusätzliches Gerät nötig. Die Sätze stehen in der Offerte; die Höchstsätze für Karten finden Sie unter <Link href="/konditionen">Konditionen</Link>.</span>
           </div>
         </div>
       </Section>

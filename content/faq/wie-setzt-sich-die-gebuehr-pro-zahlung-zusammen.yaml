@@ -1,4 +1,4 @@
 frage: Wie setzt sich die Gebühr pro Zahlung zusammen?
-antwort: 'Aus drei Teilen: der Interchange-Gebühr an die Bank des Karteninhabers (in der Schweiz durch Einigungen der WEKO mit Mastercard und Visa geregelt, bei Inland-Debitkarten am Verkaufspunkt maximal 0.12 bis 0.20 %, bei Kreditkarten 0.44 %), der Gebühr an das Kartennetzwerk und unserer Marge für Abwicklung, Terminal und Service. Alle drei Anteile weisen wir in der Offerte aus.'
+antwort: 'Aus drei Teilen: der Interchange-Gebühr an die kartenausgebende Bank, der Scheme Fee an das Kartennetzwerk (Visa oder Mastercard) und der Acquiring-Gebühr für Abwicklung und Service. Für den Interchange-Anteil gelten in der Schweiz amtliche Obergrenzen der WEKO; sie stehen unter [Kartenzahlung Gebühren Schweiz](/wissen/kartenzahlung-gebuehren-schweiz). Bei ibis payment zahlen Sie höchstens 0.85 % auf Debitkarten und höchstens 1.5 % auf Kreditkarten. Die genauen Sätze hängen von Umsatz und Kartenmix ab und stehen in der Offerte.'
 bereich: konditionen
 reihenfolge: 1

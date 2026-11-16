@@ -11,7 +11,7 @@ import { CtaBand } from '@/components/content/CtaBand';
 
 export const metadata: Metadata = pageMeta({
   title: 'Support: ein Anruf, ein Mensch, der Ihren Betrieb kennt',
-  description: 'Zahlterminal-Support ohne Hotline: Sie rufen den Berater an, der Ihr Terminal eingerichtet hat. Ersatzgerät, Handy als Überbrückung, Hilfe bei Störungen.',
+  description: 'Zahlterminal-Support mit einem festen Ansprechpartner für Technik, Abrechnung und Vertrag. Hilfe bei Störungen, Handy als Überbrückung.',
   path: '/support',
 });
 
@@ -20,9 +20,9 @@ export default async function SupportPage() {
   const s = site.service;
   return (
     <>
-      <PageHero label="Support" title="Ein Anruf. Ein Mensch." lead="Bei uns landen Sie nicht in einer Warteschlaufe. Sie rufen die Person an, die Ihr Terminal eingerichtet hat, und die kennt Ihren Betrieb." crumbs={[{ name: 'Support', href: '/support' }]} />
+      <PageHero label="Support" title="Ein Anruf. Ein Mensch." lead="Sie haben einen festen Ansprechpartner, vom ersten Gespräch bis zum laufenden Betrieb. Er kennt Ihren Betrieb und ist für Technik, Abrechnung und Vertrag zuständig." crumbs={[{ name: 'Support', href: '/support' }]} />
 
-      <Section label="Ihr Berater" sub="Mit Direktwahl, nicht mit Durchwahl.">
+      <Section label="Ihr Ansprechpartner" sub="Eine Person für alle Themen.">
         <div className="support">
           <Reveal>
             <div className="intro">
@@ -36,16 +36,8 @@ export default async function SupportPage() {
                 <span>{site.openingHours}</span>
               </div>
               <div>
-                <span>Rückruf</span>
-                <span>{s.rueckruf}</span>
-              </div>
-              <div>
-                <span>Ersatzgerät</span>
-                <span>{s.ersatzgeraet}. Überbrückung mit dem Handy als Terminal.</span>
-              </div>
-              <div>
-                <span>Wochenende</span>
-                <span>{s.wochenende}</span>
+                <span>Störung</span>
+                <span>Fällt ein Terminal aus, melden Sie sich bei Ihrem Ansprechpartner. Zur Überbrückung lässt sich das Handy als Terminal nutzen.</span>
               </div>
               <div>
                 <span>Abrechnung</span>
@@ -65,7 +57,7 @@ export default async function SupportPage() {
 
       <Section tone="grey" label="Ablauf" sub="Vom ersten Gespräch bis zur ersten Zahlung.">
         <Reveal>
-          <Intro title="In einer Woche von der Abrechnung zum laufenden Terminal." />
+          <Intro title="Im Normalfall 72 Stunden vom Vertrag bis zur ersten Zahlung." />
         </Reveal>
         <Reveal delay={1}>
           <Flow />
@@ -74,7 +66,7 @@ export default async function SupportPage() {
 
       <Section label="Störung" sub="Was Sie selbst prüfen können, bevor Sie anrufen.">
         <Reveal>
-          <Intro title="Drei Dinge, die in neun von zehn Fällen helfen." />
+          <Intro title="Drei Dinge, die Sie zuerst prüfen können." />
         </Reveal>
         <div className="facts">
           <div>
@@ -87,7 +79,7 @@ export default async function SupportPage() {
           </div>
           <div>
             <span>Terminal startet nicht</span>
-            <span>Akku laden oder Netzteil prüfen, zehn Sekunden Einschalttaste. Bleibt das Display dunkel, organisieren wir ein Ersatzgerät und richten zur Überbrückung das Handy als Terminal ein.</span>
+            <span>Akku laden oder Netzteil prüfen und die Einschalttaste gedrückt halten. Bleibt das Display dunkel, rufen Sie an. Zur Überbrückung lässt sich das Handy als Terminal nutzen.</span>
           </div>
         </div>
       </Section>
@@ -96,7 +88,7 @@ export default async function SupportPage() {
         <Faq items={faq} />
       </Section>
 
-      <CtaBand title="Etwas läuft nicht? Rufen Sie an." text={`${site.openingHours}. ${s.wochenende}`} phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Etwas läuft nicht? Rufen Sie an." text={`Erreichbar: ${site.openingHours}.`} phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

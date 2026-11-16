@@ -3,15 +3,15 @@ pfad: /branchen/coiffeur
 cluster: branche
 navTitle: Coiffeur
 metaTitle: Zahlterminal für Coiffeure | ibis payment
-metaDescription: 'Zahlterminal für den Coiffeursalon: Trinkgeld auf dem Terminal, Beleg per QR-Code, Debit ab 0.75 %. Monatlich kündbar, Installation vor Ort inbegriffen.'
+metaDescription: 'Zahlterminal für den Coiffeursalon: Trinkgeld auf dem Terminal, Beleg per QR-Code, Anbindung an die Terminsoftware. Genaue Sätze in der Offerte.'
 kicker: Branche
 lead: Ein Terminal, das in die Schürze passt, Trinkgeld annimmt und ohne Papierrolle auskommt. Die Gebühren stehen vor der Unterschrift fest.
 intro: |
   Im Coiffeursalon wird am Ende des Termins bezahlt, am Empfang oder direkt am Stuhl. Die Kundschaft zahlt mit dem, was gerade in der Hand ist: Debitkarte, Kreditkarte, TWINT oder Handy. Wer nur Bargeld annimmt, schickt sie zum Bancomat.
 
-  Für einen Salon zählen drei Dinge. Das Terminal darf nicht im Weg stehen. Trinkgeld muss ohne Münzen funktionieren. Und die Gebühren müssen auch in einer ruhigen Woche tragbar sein, ohne Mindestumsatz und ohne Mindestgebühr. Dazu kommt die Frage, ob Ihre Terminsoftware den Betrag ans Terminal übergeben kann.
+  Für einen Salon zählen drei Dinge. Das Terminal darf nicht im Weg stehen. Trinkgeld muss ohne Münzen funktionieren. Und die Gebühren müssen zum Umsatz des Salons passen, auch in einer ruhigen Woche. Dazu kommt die Frage, ob Ihre Terminsoftware den Betrag ans Terminal übergeben kann.
 
-  Die Preisliste steht unter [Konditionen](/konditionen), eine Offerte mit Ihren Zahlen erhalten Sie über [Kontakt](/kontakt).
+  Wie der Preis zustande kommt, steht unter [Konditionen](/konditionen). Eine Offerte mit Ihren Zahlen erhalten Sie über [Kontakt](/kontakt).
 sections:
   - heading: So läuft die Zahlung im Salon ab
     body: |
@@ -19,64 +19,65 @@ sections:
 
       Den Beleg braucht im Salon kaum jemand auf Papier. Der [PayTec N62](/geraete/paytec-n62) zeigt einen QR-Code auf dem Display, die Kundin scannt ihn und hat den Beleg auf dem Handy. Alternativ geht er per SMS oder E-Mail raus. Papierrolle, Nachschub und Rollenwechsel zwischen zwei Terminen entfallen.
 
-      TWINT läuft direkt auf dem Terminal, ohne QR-Aufsteller am Tresen. Apple Pay und Google Pay kosten den Satz der hinterlegten Karte.
+      TWINT läuft direkt auf dem Terminal, ohne QR-Aufsteller am Tresen. Apple Pay und Google Pay werden wie die hinterlegte Karte abgerechnet.
   - heading: N62 am Stuhl oder V3CT3 am Empfang
     body: |
-      Für die meisten Salons passt der [PayTec N62](/geraete/paytec-n62). Er wiegt 176 Gramm, hat keinen Drucker, verbindet sich über WLAN oder 4G und schafft laut Datenblatt über 550 Zahlungen pro Akkuladung. Er liegt in der Schublade am Empfang oder steckt in der Schürzentasche. Miete CHF 19 pro Monat oder Kauf für CHF 390, exkl. MwSt.
+      Für die meisten Salons passt der [PayTec N62](/geraete/paytec-n62). Er wiegt 176 Gramm, hat keinen Drucker, verbindet sich über WLAN oder 4G und schafft laut Datenblatt über 550 Zahlungen pro Akkuladung. Er liegt in der Schublade am Empfang oder steckt in der Schürzentasche.
 
-      Wer einen fixen Empfang hat und einen gedruckten Beleg will, nimmt den [PayTec V3CT3](/geraete/paytec-v3ct3): ein Tischterminal mit Tastatur und eigenem Drucker, per LAN oder WLAN verbunden, zum gleichen Preis.
+      Wer einen fixen Empfang hat und einen gedruckten Beleg will, nimmt den [PayTec V3CT3](/geraete/paytec-v3ct3): ein Tischterminal mit Tastatur und eigenem Drucker, per LAN oder WLAN verbunden.
 
-      Faustregel: ein Stuhl oder mobiler Service, dann N62. Fester Empfang mit Papierbeleg, dann V3CT3. Salons mit mehreren Stühlen und Stosszeiten am Samstag kombinieren beides, ein Terminal am Empfang und ein mobiles als zweite Linie. Jedes Terminal hat seine eigene Miete, eine Mindestgebühr gibt es nicht. Alle Modelle stehen unter [Geräte](/geraete).
+      Faustregel: ein Stuhl oder mobiler Service, dann N62. Fester Empfang mit Papierbeleg, dann V3CT3. Salons mit mehreren Stühlen und Stosszeiten am Samstag kombinieren beides, ein Terminal am Empfang und ein mobiles als zweite Linie. Beide Terminals gibt es als Miete oder Kauf, der Preis steht in der Offerte. Alle Modelle stehen unter [Geräte](/geraete).
   - heading: Trinkgeld ohne Münzen
     body: |
-      Immer weniger Kundschaft hat Bargeld dabei. Das Terminal fragt vor der Bestätigung nach einem Trinkgeld, die Kundin wählt einen Betrag oder überspringt die Frage [Trinkgeldfunktion pro Modell mit SwiPay bestätigen]. Ob die Abfrage aktiv ist, legen wir bei der Installation mit Ihnen fest.
+      Immer weniger Kundschaft hat Bargeld dabei. Das Terminal fragt vor der Bestätigung nach einem Trinkgeld, die Kundin wählt einen Betrag oder überspringt die Frage. Ob die Abfrage aktiv ist, legen wir bei der Inbetriebnahme mit Ihnen fest.
 
-      Das Trinkgeld läuft als Teil der Kartenzahlung mit, wird mit dem Umsatz gutgeschrieben und unterliegt derselben Gebühr wie der Grundbetrag. Damit Sie es am Monatsende dem Team zuordnen können, brauchen Sie die Liste der einzelnen Zahlungen [Zugang zur Transaktionsübersicht bestätigen]. Wie Sie es verteilen und verbuchen, klären Sie mit Ihrem Treuhänder.
+      Das Trinkgeld läuft als Teil der Kartenzahlung mit, wird mit dem Umsatz gutgeschrieben und unterliegt derselben Gebühr wie der Grundbetrag. Damit Sie es am Monatsende dem Team zuordnen können, brauchen Sie die Liste der einzelnen Zahlungen aus dem Händlerportal. Wie Sie es verteilen und verbuchen, klären Sie mit Ihrem Treuhänder.
   - heading: Terminsoftware anbinden oder Betrag eintippen
     body: |
       Viele Salons führen Termine und Preise in einer Software, die auch als Kasse dient. Unterstützt sie eines der Kassenprotokolle OPI, ZVT oder KIT, übergibt sie den Betrag direkt ans Terminal. Niemand tippt ab, und der Tagesabschluss stimmt mit der Kartenabrechnung überein. Der N62 wird über KIT in der Cloud angebunden, der V3CT3 über KIT oder ZVT-LAN.
 
-      Ob Ihre Software das kann, klären wir vor der Installation mit dem Softwareanbieter. Wenn nicht, bleibt das Eintippen, was bei zwanzig Zahlungen am Tag kein Problem ist. Wer gleichzeitig über ein neues Kassensystem nachdenkt, findet unter [Kassensysteme](/kassensysteme) die Modelle, die wir anbinden und vor Ort einrichten.
+      Ob Ihre Software das kann, klären wir vor der Inbetriebnahme mit dem Softwareanbieter. Wenn nicht, bleibt das Eintippen, was bei zwanzig Zahlungen am Tag kein Problem ist. Wer gleichzeitig über ein neues Kassensystem nachdenkt, findet unter [Kassensysteme](/kassensysteme) die Systeme, die sich anbinden lassen.
   - heading: Samstag, Akku und Ausfall
     body: |
-      Am Samstag sind mehrere Kundinnen gleichzeitig fertig. Ein zweites Terminal für CHF 19 pro Monat kostet weniger als ein Empfang, an dem drei Leute warten. Der Akku des N62 hält laut Datenblatt über 14 Stunden Bildschirmzeit; über Nacht ist er in 2.5 Stunden geladen.
+      Am Samstag sind mehrere Kundinnen gleichzeitig fertig. Ein zweites Terminal verkürzt die Wartezeit am Empfang; was es kostet, steht in der Offerte. Der Akku des N62 hält laut Datenblatt über 14 Stunden Bildschirmzeit; über Nacht ist er in 2.5 Stunden geladen.
 
-      Fällt das WLAN aus, wechselt der N62 selbständig auf 4G. Fällt das Terminal selbst aus, schicken wir ein Ersatzgerät; in der Miete ist das inbegriffen. Bei Fragen erreichen Sie über die Direktwahl die Person, die das Terminal bei Ihnen installiert hat. Details unter [Support](/support).
-  - heading: Abrechnung, Gutschrift und Wechsel
+      Fällt das WLAN aus, wechselt der N62 selbständig auf 4G. Bei einer Störung am Terminal wenden Sie sich an Ihren festen Ansprechpartner. Er ist für alle Themen zuständig, vom Terminal bis zur Abrechnung. Details unter [Support](/support).
+  - heading: Kosten, Abrechnung und Wechsel
     body: |
-      Die Kartenumsätze werden gesammelt pro Tag am nächsten Werktag auf Ihr Geschäftskonto gutgeschrieben. Einmal pro Monat erhalten Sie eine Abrechnung auf einer Seite mit jeder Position: Debit Inland 0.75 %, Kredit Inland 1.25 %, TWINT 1.00 %, CHF 0.05 pro Zahlung, Terminalmiete, alles exkl. MwSt. Keine Aufschaltgebühr, keine Mindestgebühr, monatlich kündbar.
+      Was ein Salon zahlt, hängt von Umsatz und Kartenmix ab. Die Transaktionsgebühren betragen höchstens 0.85 % auf Debitkarten und höchstens 1.5 % auf Kreditkarten. Die genauen Sätze stehen in der Offerte, ebenso der Satz für TWINT und der Preis für das Terminal als Miete oder Kauf. Der [Rechner](/konditionen#rechner) schätzt mit Ihren Werten die mögliche Ersparnis als Spanne pro Monat und Jahr; die Beispielrechnung auf dieser Seite rechnet mit den dort genannten Annahmen.
 
-      Die Beispielrechnung unten zeigt, was ein Salon mit den dort genannten Annahmen pro Monat zahlt, verglichen mit dem Listenpreis eines Grossanbieters. Setzen Sie Ihre eigenen Zahlen ein; die drei Angaben stehen auf Ihrer letzten Abrechnung.
+      Die Kartenumsätze werden in Schweizer Franken auf Ihr Geschäftskonto ausbezahlt. Die Abrechnung zeigt, über welchen Kanal die Umsätze kamen.
 
-      Wenn Sie heute schon ein Terminal haben, schicken Sie uns diese Abrechnung über [Kontakt](/kontakt). Wir rechnen innert 24 Stunden nach und unterbieten sie, oder wir sagen Ihnen, dass es nicht geht. Beim Wechsel prüfen wir die Kündigungsfrist Ihres heutigen Vertrags und installieren am Stichtag, damit kein Tag ohne Terminal bleibt. Alle Sätze stehen unter [Konditionen](/konditionen).
+      Wenn Sie heute schon ein Terminal haben, schicken Sie uns Ihre letzte Abrechnung über [Kontakt](/kontakt). Sie erhalten innert 24 Stunden an Werktagen eine Antwort mit persönlicher Vergleichsrechnung. Den Vertrag schliessen Sie mit der SwiPay AG; ibis payment berät, vermittelt und begleitet Sie bis zur Inbetriebnahme. Laufzeit und Kündigung stehen im Vertrag mit SwiPay, wir zeigen sie Ihnen vor der Unterschrift. Beim Wechsel richtet sich der Termin nach der Kündigungsfrist Ihres heutigen Vertrags.
 beispiel:
   aktiv: true
   titel: Beispiel Coiffeursalon
+  branche: beauty
   umsatz: 12000
-  bon: 65
+  bon: 120
   kreditanteil: 30
   vergleich: gross
-  erklaerung: Annahmen für einen Salon mit zwei bis drei Stühlen und mittlerem Betrag pro Termin; Platzhalter, setzen Sie Ihre eigenen Zahlen aus der letzten Abrechnung ein.
+  erklaerung: Der Kartenumsatz ist eine Annahme. Der Durchschnittsbon ist der Branchenwert, mit dem auch der Rechner von SwiPay arbeitet. Mit Ihren eigenen Zahlen rechnet der Rechner genauer.
 preisliste: []
 faq:
   - frage: Brauche ich im Salon ein Terminal mit Drucker?
     antwort: |
-      In den meisten Fällen nicht. Der N62 zeigt den Beleg als QR-Code auf dem Display oder schickt ihn per SMS oder E-Mail. Wer trotzdem Papier will, nimmt den V3CT3 mit eingebautem Drucker zum gleichen Mietpreis.
+      In den meisten Fällen nicht. Der N62 zeigt den Beleg als QR-Code auf dem Display oder schickt ihn per SMS oder E-Mail. Wer trotzdem Papier will, nimmt den V3CT3 mit eingebautem Drucker.
   - frage: Kann die Kundin Trinkgeld über die Karte geben?
     antwort: |
       Ja. Das Terminal fragt vor der Bestätigung nach einem Trinkgeld, die Kundin wählt einen Betrag oder überspringt die Abfrage. Das Trinkgeld wird mit dem Umsatz gutgeschrieben und mit demselben Satz belastet wie der Grundbetrag.
   - frage: Was passiert, wenn das WLAN im Salon ausfällt?
     antwort: |
-      Der N62 wechselt automatisch auf 4G und zahlt weiter. Der V3CT3 am Empfang hängt am LAN oder WLAN; wo die Verbindung unsicher ist, empfehlen wir das Kabel. Fällt das Terminal selbst aus, ist das Ersatzgerät in der Miete inbegriffen.
+      Der N62 wechselt automatisch auf 4G und zahlt weiter. Der V3CT3 am Empfang hängt am LAN oder WLAN; wo die Verbindung unsicher ist, empfehlen wir das Kabel. Bei einer Störung am Terminal wenden Sie sich an Ihren festen Ansprechpartner.
   - frage: Lohnt sich ein Terminal für einen Salon mit wenigen Kartenzahlungen?
     antwort: |
-      Es gibt keine Mindestgebühr und keinen Mindestumsatz. Sie zahlen pro Zahlung den Prozentsatz plus CHF 0.05 und die Terminalmiete von CHF 19 pro Monat, exkl. MwSt. Wer wenig Umsatz hat, zahlt wenig.
+      Das hängt von Umsatz und Kartenmix ab. Die Transaktionsgebühren betragen höchstens 0.85 % auf Debitkarten und höchstens 1.5 % auf Kreditkarten; dazu kommt das Terminal als Miete oder Kauf, der Preis steht in der Offerte. Schicken Sie uns Ihre Zahlen, dann sehen Sie vor der Unterschrift, was es bei Ihrem Umsatz kostet.
   - frage: Kann ich TWINT am Terminal annehmen?
     antwort: |
-      Ja, TWINT läuft direkt auf dem Terminal, ohne separaten QR-Aufsteller. Der Satz beträgt 1.00 % exkl. MwSt. und steht wie alle anderen Positionen auf der [Preisliste](/konditionen).
+      Ja, TWINT läuft direkt auf dem Terminal, ohne separaten QR-Aufsteller. Der Satz für TWINT steht in der Offerte. Wie der Preis insgesamt zustande kommt, lesen Sie unter [Konditionen](/konditionen).
   - frage: Wie lange dauert der Wechsel vom bisherigen Anbieter?
     antwort: |
-      Der Vergleich Ihrer Abrechnung dauert 24 Stunden. Danach prüfen wir die Kündigungsfrist Ihres heutigen Vertrags und installieren am Stichtag. Die Aufschaltung kostet CHF 0.
+      Die Vergleichsrechnung zu Ihrer Abrechnung erhalten Sie innert 24 Stunden an Werktagen. Ab Eingang des Vertrags dauert es im Normalfall 72 Stunden bis zur ersten Zahlung, sofern alle Unterlagen vorliegen. Den Zeitpunkt des Wechsels bestimmt die Kündigungsfrist Ihres heutigen Vertrags.
 bausteine:
   rechner: true
   geraete: true
@@ -84,8 +85,8 @@ bausteine:
   preisliste: false
 formular: none
 cta:
-  titel: Offerte für Ihren Salon innert 24 Stunden.
-  text: Schicken Sie uns Ihre letzte Abrechnung oder rufen Sie an. Wir rechnen mit Ihren Zahlen, nicht mit unseren.
+  titel: Offerte für Ihren Salon anfordern.
+  text: Schicken Sie uns Ihre letzte Abrechnung oder rufen Sie an. Sie erhalten innert 24 Stunden an Werktagen eine Antwort, gerechnet mit Ihren Zahlen.
   label: Offerte anfordern
   href: /kontakt
 verwandt:

@@ -93,23 +93,17 @@ export default config({
       },
     }),
     konditionen: singleton({
-      label: 'Konditionen (Preisliste und Rechner)',
+      label: 'Konditionen (Höchstsätze)',
       path: 'content/konditionen',
       format: { data: 'yaml' },
       schema: {
         stand: fields.date({ label: 'Stand der Preise', validation: { isRequired: true } }),
         hinweis: fields.text({ label: 'Hinweis unter jeder Preisangabe', defaultValue: 'Preise exkl. MwSt.' }),
-        debit: fields.number({ label: 'Debitkarten Inland (%)', validation: { isRequired: true }, step: 0.01 }),
+        debit: fields.number({ label: 'Debitkarten: Höchstsatz (%)', validation: { isRequired: true }, step: 0.01 }),
         debitKarten: fields.text({ label: 'Debitkarten: Aufzählung' }),
-        kredit: fields.number({ label: 'Kreditkarten Inland (%)', validation: { isRequired: true }, step: 0.01 }),
+        kredit: fields.number({ label: 'Kreditkarten: Höchstsatz (%)', validation: { isRequired: true }, step: 0.01 }),
         kreditKarten: fields.text({ label: 'Kreditkarten: Aufzählung' }),
-        twint: fields.number({ label: 'TWINT (%)', step: 0.01 }),
-        amex: fields.number({ label: 'American Express (%)', step: 0.01 }),
-        auslandZuschlag: fields.number({ label: 'Zuschlag Ausland- und Firmenkarten (Prozentpunkte)', step: 0.01 }),
-        txFix: fields.number({ label: 'Fixbetrag pro Zahlung (CHF)', validation: { isRequired: true }, step: 0.01 }),
-        miete: fields.number({ label: 'Terminal-Miete pro Monat (CHF)', validation: { isRequired: true }, step: 0.5 }),
-        kauf: fields.number({ label: 'Terminal-Kauf ab (CHF)', step: 1 }),
-        walletHinweis: fields.text({ label: 'Hinweis Wallets (Apple Pay, Google Pay, Samsung Pay)' }),
+        quelle: fields.text({ label: 'Quelle und Hinweis zu den Sätzen', multiline: true }),
         weitere: fields.array(
           fields.object({
             label: fields.text({ label: 'Position' }),
@@ -117,35 +111,6 @@ export default config({
             wert: fields.text({ label: 'Wert (Text)' }),
           }),
           { label: 'Weitere Positionen (Text)', itemLabel: (p) => p.fields.label.value }
-        ),
-        zerlegung: fields.object(
-          {
-            interchange: fields.number({ label: 'Interchange Debit (%)', step: 0.01 }),
-            netzwerk: fields.number({ label: 'Netzwerkgebühr Debit (%)', step: 0.01 }),
-            quelle: fields.text({ label: 'Quelle und Stand der Interchange-Angabe' }),
-          },
-          { label: 'Gebühren-Zerlegung (Beispiel Debitkarte)' }
-        ),
-        rechner: fields.object(
-          {
-            umsatz: fields.number({ label: 'Vorgabe Kartenumsatz pro Monat' }),
-            bon: fields.number({ label: 'Vorgabe Durchschnittsbetrag' }),
-            kreditanteil: fields.number({ label: 'Vorgabe Kreditkartenanteil (%)' }),
-          },
-          { label: 'Rechner-Vorgaben' }
-        ),
-        vergleiche: fields.array(
-          fields.object({
-            id: fields.text({ label: 'Kennung (z. B. gross, app)' }),
-            label: fields.text({ label: 'Anzeige' }),
-            debit: fields.number({ label: 'Debit (%)', step: 0.01 }),
-            kredit: fields.number({ label: 'Kredit (%)', step: 0.01 }),
-            tx: fields.number({ label: 'CHF pro Zahlung', step: 0.01 }),
-            fix: fields.number({ label: 'CHF pro Monat', step: 0.5 }),
-            quelle: fields.text({ label: 'Quelle (Pflicht, sonst wird die Option nicht angezeigt)' }),
-            stand: fields.text({ label: 'Stand (Monat Jahr)' }),
-          }),
-          { label: 'Vergleichswerte im Rechner', itemLabel: (p) => p.fields.label.value }
         ),
       },
     }),
@@ -178,11 +143,8 @@ export default config({
           fields.object({ label: fields.text({ label: 'Merkmal' }), wert: fields.text({ label: 'Wert' }) }),
           { label: 'Technische Daten', itemLabel: (p) => `${p.fields.label.value}: ${p.fields.wert.value}` }
         ),
-        mieteMonat: fields.number({ label: 'Miete pro Monat (CHF), leer = nach Projekt', step: 0.5 }),
-        kauf: fields.number({ label: 'Kaufpreis (CHF), leer = nach Projekt', step: 1 }),
-        preisHinweis: fields.text({ label: 'Preis-Hinweis' }),
         datenblatt: fields.url({ label: 'Datenblatt (URL)' }),
-        bild: fields.image({ label: 'Produktfoto (nur mit Freigabe von SwiPay/PayTec)', directory: 'public/images/geraete', publicPath: '/images/geraete/' }),
+        bild: fields.image({ label: 'Produktfoto', directory: 'public/images/geraete', publicPath: '/images/geraete/' }),
         bildAlt: fields.text({ label: 'Bildbeschreibung' }),
         metaDescription: fields.text({ label: 'Meta-Description' }),
       },
@@ -273,13 +235,28 @@ export default config({
           {
             aktiv: fields.checkbox({ label: 'Beispielrechnung zeigen' }),
             titel: fields.text({ label: 'Titel' }),
-            umsatz: fields.number({ label: 'Kartenumsatz pro Monat (CHF)' }),
-            bon: fields.number({ label: 'Durchschnittsbetrag (CHF)' }),
-            kreditanteil: fields.number({ label: 'Kreditkartenanteil (%)' }),
-            vergleich: fields.text({ label: 'Vergleichs-Kennung (gross oder app)', defaultValue: 'gross' }),
+            branche: fields.select({
+              label: 'Branche im Rechner (wie bei SwiPay)',
+              options: [
+                { label: 'Gastronomie', value: 'gastro' },
+                { label: 'Detailhandel / Ladengeschäft', value: 'retail' },
+                { label: 'Beauty & Wellness', value: 'beauty' },
+                { label: 'Hotellerie', value: 'hotel' },
+                { label: 'Kiosk, Take-away & Tankstelle', value: 'kiosk' },
+                { label: 'Online-Shop', value: 'ecom' },
+                { label: 'Dienstleistung & Beratung', value: 'dienstleistung' },
+                { label: 'Verein & Verband', value: 'verein' },
+                { label: 'Sonstige', value: 'sonstige' },
+              ],
+              defaultValue: 'sonstige',
+            }),
+            umsatz: fields.number({ label: 'Kartenumsatz pro Monat (CHF), Annahme' }),
+            bon: fields.number({ label: 'Durchschnittsbon (CHF): Branchenwert von SwiPay verwenden' }),
+            kreditanteil: fields.number({ label: 'Kreditkartenanteil (%), nicht mehr verwendet' }),
+            vergleich: fields.text({ label: 'Vergleichs-Kennung, nicht mehr verwendet', defaultValue: 'gross' }),
             erklaerung: fields.text({ label: 'Erklärung', multiline: true }),
           },
-          { label: 'Beispielrechnung (liest die Konditionen)' }
+          { label: 'Beispielrechnung (rechnet wie der SwiPay-Rechner)' }
         ),
         preisliste: fields.array(
           fields.object({

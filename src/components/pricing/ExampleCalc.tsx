@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import type { Konditionen } from '@/lib/content';
-import { CLUSTERS, calcSavings, clusterForPath, marketCost } from '@/lib/swipay-calc';
+import { CLUSTERS, calcSavings, clusterForPath, type ClusterKey } from '@/lib/swipay-calc';
 import { chf, fmtInt, dateDE } from '@/lib/format';
 
 /** Beispielrechnung für Branchen-Seiten: dasselbe Modell wie der Rechner (Branchendurchschnitt als Vergleich). */
-export function ExampleCalc({ k, titel, umsatz, bon, kreditanteil, pfad, erklaerung }: { k: Konditionen; titel: string; umsatz: number; bon: number; kreditanteil?: number; vergleich?: string; pfad: string; erklaerung?: string }) {
-  void kreditanteil;
-  const cluster = clusterForPath(pfad);
-  const c = CLUSTERS.find((x) => x.key === cluster)!;
+export function ExampleCalc({ k, titel, umsatz, bon, pfad, branche, erklaerung }: { k: Konditionen; titel: string; umsatz: number; bon: number; pfad: string; branche?: string | null; erklaerung?: string }) {
+  const c = CLUSTERS.find((x) => x.key === branche) ?? CLUSTERS.find((x) => x.key === clusterForPath(pfad))!;
+  const cluster: ClusterKey = c.key;
   const r = calcSavings({ cluster, umsatzJahr: umsatz * 12, bon });
-  const m = marketCost(umsatz, bon);
   return (
     <div className="example">
       <div style={{ display: 'grid', gap: 18, alignContent: 'start' }}>
@@ -30,16 +28,6 @@ export function ExampleCalc({ k, titel, umsatz, bon, kreditanteil, pfad, erklaer
           <div>
             <span>Zahlungen pro Monat</span>
             <span className="num">{fmtInt(r.tx)}</span>
-          </div>
-          <div>
-            <span>Heutige Kosten, Branchendurchschnitt</span>
-            <span className="num">
-              {chf(m.low)} – {chf(m.high)} pro Monat
-            </span>
-          </div>
-          <div>
-            <span>Geschätzte Kosten bei ibis payment</span>
-            <span className="num">{chf(r.swipayMonthly)} pro Monat</span>
           </div>
         </div>
         {erklaerung && <p className="note" style={{ maxWidth: '60ch' }}>{erklaerung}</p>}

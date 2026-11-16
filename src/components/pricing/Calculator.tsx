@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { CLUSTERS, calcSavings, marketCost, type ClusterKey } from '@/lib/swipay-calc';
+import { CLUSTERS, calcSavings, type ClusterKey } from '@/lib/swipay-calc';
 import { chf, fmtInt } from '@/lib/format';
 
 type Props = { stand: string; defaultCluster?: ClusterKey; defaultUmsatzJahr?: number; defaultBon?: number };
@@ -187,14 +187,12 @@ export function Calculator({ stand, defaultCluster = 'gastro', defaultUmsatzJahr
               <span className="muted">Zahlungen pro Monat</span>
               <span className="num">{fmtInt(r.tx)}</span>
             </div>
-            <div className="r">
-              <span className="muted">Geschätzte Kosten bei ibis payment</span>
-              <span className="num">{chf(r.swipayMonthly)} pro Monat</span>
-            </div>
-            <div className="r">
-              <span className="muted">{r.basis === 'ist' ? 'Ihre heutigen Kosten' : 'Heutige Kosten, Branchendurchschnitt'}</span>
-              <span className="num">{r.basis === 'ist' && r.istMonthly != null ? `${chf(r.istMonthly)} pro Monat` : `${chf(marketCost(input.umsatzJahr / 12, input.bon).low)} – ${chf(marketCost(input.umsatzJahr / 12, input.bon).high)} pro Monat`}</span>
-            </div>
+            {r.basis === 'ist' && r.istMonthly != null && (
+              <div className="r">
+                <span className="muted">Ihre heutigen Kosten</span>
+                <span className="num">{chf(r.istMonthly)} pro Monat</span>
+              </div>
+            )}
           </div>
         )}
         {shown && r.micropayment && <p className="note">Bei Ihrem Bon zählt vor allem die Gebühr pro Zahlung, nicht der Prozentsatz. Genau das rechnen wir in der Offerte nach.</p>}

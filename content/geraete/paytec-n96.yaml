@@ -36,10 +36,7 @@ specs:
   wert: PCI PTS 6.x, EMV 3.0 L1/L2, ep2 (Schweiz)
 - label: Kassenanbindung
   wert: KIT (Cloud, API), OPI, ZVT
-mieteMonat: 24
-kauf: 590
-preisHinweis: Miete inklusive Wartung, Updates und Ersatzgerät. Preise exkl. MwSt.
 datenblatt: https://www.paytec.ch/fileadmin/produkte/N96/n96-data-sheets-2025-deutsch.pdf
 bild: /images/geraete/paytec-n96.webp
 bildAlt: PayTec Smart-POS N96, mobiles Zahlterminal mit 6.5-Zoll-Display und Drucker
-metaDescription: 'PayTec N96 bei ibis payment: mobiles Zahlterminal mit 6.5-Zoll-HD-Display, Drucker, 4G und WLAN, ep2-zertifiziert. Technische Daten, Miete und Kaufpreis.'
+metaDescription: 'PayTec N96 bei ibis payment: mobiles Zahlterminal mit 6.5-Zoll-HD-Display, Drucker, 4G und WLAN, ep2-zertifiziert. Technische Daten und Einsatz.'

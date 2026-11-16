@@ -32,10 +32,7 @@ specs:
   wert: PCI PTS 6.x, EMV L1/L2, ep2 (Schweiz)
 - label: Kassenanbindung
   wert: KIT (Cloud, API, JSON, TLV), ZVT-LAN, optional Kunden-Pinpad P200
-mieteMonat: 19
-kauf: 390
-preisHinweis: Miete inklusive Wartung, Updates und Ersatzgerät. Preise exkl. MwSt.
 datenblatt: https://www.paytec.ch/fileadmin/produkte/V3CT3/fact-sheet_v3ct3_paytec_payment-solutions_2023_deutsch.pdf
 bild: /images/geraete/paytec-v3ct3.webp
 bildAlt: PayTec Classic-POS V3CT3, stationäres Zahlterminal mit Drucker
-metaDescription: 'PayTec V3CT3 bei ibis payment: stationäres Zahlterminal mit Tastatur und Drucker, LAN und WLAN, ep2-zertifiziert. Technische Daten, Miete und Kaufpreis.'
+metaDescription: 'PayTec V3CT3 bei ibis payment: stationäres Zahlterminal mit Tastatur und Drucker, LAN und WLAN, ep2-zertifiziert. Technische Daten und Einsatz.'

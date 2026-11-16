@@ -29,16 +29,11 @@ specs:
   wert: IP65, IK10, UV-beständig, ATEX, Betrieb -20 bis +70 °C
 - label: System
   wert: Android 11, Quad-Core 2.0 GHz, 2 GB RAM, 8 GB Speicher
-- label: Stromversorgung
-  wert: DC 12 bis 48 V
 - label: Masse und Gewicht
   wert: 146 × 101 × 57 mm, 620 g, Ausschnitt 108.7 × 86.4 mm
 - label: Zertifizierung
   wert: PCI PTS 6.x, EMV L1/L2, EMV CL1, ep2 (Schweiz)
-mieteMonat: null
-kauf: null
-preisHinweis: Offerte pro Projekt, weil Einbau und Anbindung je nach Automat verschieden sind.
 datenblatt: https://www.paytec.ch/fileadmin/pdf/un20-data-sheet-2026-eng.pdf
 bild: /images/geraete/paytec-un20.webp
 bildAlt: PayTec UN20, Einbauterminal für Automaten
-metaDescription: 'PayTec UN20 bei ibis payment: wetterfestes Einbauterminal für Verkaufsautomaten, Parking und Ladestationen, IP65, MDB und RS232. Technische Daten und Offerte.'
+metaDescription: 'PayTec UN20 bei ibis payment: wetterfestes Einbauterminal für Verkaufsautomaten, Parking und Ladestationen, IP65, MDB und RS232. Technische Daten und Einsatz.'

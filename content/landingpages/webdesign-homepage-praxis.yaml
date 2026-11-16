@@ -46,6 +46,7 @@ sections:
 beispiel:
   aktiv: false
   titel: Keine Beispielrechnung
+  branche: sonstige
   umsatz: 0
   bon: 0
   kreditanteil: 0

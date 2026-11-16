@@ -3,13 +3,13 @@ pfad: /zahlterminal
 cluster: payment
 navTitle: Zahlterminal
 metaTitle: 'Zahlterminal Schweiz: Modelle, Kosten, Ablauf | ibis payment'
-metaDescription: 'Zahlterminal für die Schweiz: ep2-zertifiziert, TWINT auf dem Terminal, Miete ab CHF 19 oder Kauf ab CHF 390. Konditionen offen, Installation vor Ort.'
+metaDescription: 'Zahlterminal für die Schweiz: ep2-zertifiziert, TWINT auf dem Terminal, Miete oder Kauf. Was es können muss, welche Bauform passt, wie die Kosten entstehen.'
 kicker: Zahlterminal
-lead: Ein Zahlterminal nimmt Debitkarten, Kreditkarten, TWINT und Handy-Wallets an einem Ort an. Hier steht, was es in der Schweiz können muss, welche Bauform zu welchem Betrieb passt und was es kostet.
+lead: Ein Zahlterminal nimmt Debitkarten, Kreditkarten, TWINT und Handy-Wallets an einem Ort an. Hier steht, was es in der Schweiz können muss, welche Bauform zu welchem Betrieb passt und wie sich die Kosten zusammensetzen.
 intro: |
   Kartenterminal, Kartenlesegerät, EFT/POS-Terminal, Bezahlterminal: Die Begriffe meinen dasselbe, nämlich das Terminal, an dem Ihre Kundschaft mit Karte oder Handy bezahlt. Für die Wahl zählen drei Fragen. Welche Zahlungsmittel nimmt es an, wie ist es gebaut, und was kostet jede Zahlung.
 
-  ibis payment vermittelt Terminals des Herstellers PayTec aus Effretikon. Die Abwicklung läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer. Jede Gebühr steht auf der Seite [Konditionen](/konditionen), und der Berater, der die Offerte schreibt, installiert das Terminal auch bei Ihnen im Betrieb.
+  ibis payment vermittelt Terminals des Herstellers PayTec aus Effretikon. Die Abwicklung läuft über das SwiPay-Bezahlnetzwerk mit TeleCash/Fiserv als Acquirer. Den Vertrag schliessen Sie mit der SwiPay AG; ibis berät, vermittelt und begleitet Sie bis zur Inbetriebnahme. Die Höchstsätze stehen auf der Seite [Konditionen](/konditionen), die genauen Sätze in Ihrer Offerte.
 sections:
   - heading: Was ein Zahlterminal in der Schweiz können muss
     body: |
@@ -30,38 +30,40 @@ sections:
       Alle Modelle mit technischen Daten stehen unter [Geräte](/geraete). Wenn Sie unsicher sind, schauen wir uns den Ablauf bei Ihnen an.
   - heading: Was ein Zahlterminal kostet
     body: |
-      Ein Terminal verursacht zwei Arten von Kosten: den Preis für das Terminal und die Gebühr pro Zahlung. Beide stehen auf der Seite [Konditionen](/konditionen), alle Preise exkl. MwSt.
+      Ein Terminal verursacht zwei Arten von Kosten: den Preis für das Terminal und die Gebühr pro Zahlung.
 
-      Das Terminal mieten Sie ab CHF 19 pro Monat, inklusive Wartung, Updates und Ersatzgerät, oder Sie kaufen es ab CHF 390. Aufschaltung und Installation vor Ort kosten CHF 0.
+      Das Terminal mieten oder kaufen Sie. Den Preis nennen wir in der Offerte, für beide Varianten nebeneinander, damit Sie vergleichen können. Wann welche Variante passt, steht unter [Zahlterminal mieten](/zahlterminal-mieten) und [Zahlterminal kaufen](/zahlterminal-kaufen).
 
-      Pro Zahlung fallen ein Prozentsatz je Kartenart und CHF 0.05 an: Debitkarten Inland 0.75 %, Kreditkarten Inland 1.25 %, TWINT 1.00 %, American Express 1.90 %, Ausland- und Firmenkarten plus 0.90 Prozentpunkte. Apple Pay und Google Pay kosten den Satz der hinterlegten Karte. Es gibt keine Mindestgebühr und keine Mindestlaufzeit.
+      Die Gebühr pro Zahlung hängt von der Kartenart ab. Auf Debitkarten sind es höchstens 0.85 %, auf Kreditkarten höchstens 1.5 %. Die genauen Sätze richten sich nach Umsatz und Kartenmix und stehen in Ihrer Offerte, ebenso die Sätze für TWINT und weitere Zahlungsmittel. Laufzeit und Kündigung stehen im Vertrag mit SwiPay; wir zeigen sie Ihnen vor der Unterschrift.
 
-      Die Beispielrechnung unten zeigt ein Restaurant. Setzen Sie Ihre eigenen Zahlen ein, drei Angaben aus Ihrer letzten Abrechnung genügen.
+      Die Beispielrechnung auf dieser Seite zeigt ein Restaurant. Im Rechner weiter unten setzen Sie Ihre eigenen Zahlen ein: Branche, Kartenumsatz pro Jahr und Durchschnittsbon genügen.
   - heading: Vom ersten Gespräch bis zur ersten Zahlung
     body: |
       Der Ablauf ist in jedem Betrieb ähnlich. Wie lange er dauert, hängt vor allem von der Kündigungsfrist beim bisherigen Anbieter ab.
 
-      - Sie schicken uns Ihre letzte Monatsabrechnung oder nennen uns Umsatz, Durchschnittsbetrag und Kartenmix. Innert 24 Stunden erhalten Sie eine Offerte, in der jede Gebühr einzeln steht.
-      - Läuft noch ein Vertrag, prüfen wir die Kündigungsfrist und übernehmen die Kündigung.
-      - Ihr Berater konfiguriert das Terminal und installiert es vor Ort: Kassenanbindung, WLAN, Testzahlung. Ihr Team sieht, wie Trinkgeld, Storno und Tagesabschluss funktionieren.
-      - Der Umsatz wird gesammelt pro Tag am nächsten Werktag auf Ihr Geschäftskonto gutgeschrieben. Einmal pro Monat erhalten Sie eine Abrechnung auf einer Seite.
+      - Sie schicken uns Ihre letzte Monatsabrechnung oder nennen uns Umsatz, Durchschnittsbetrag und Kartenmix. An Werktagen erhalten Sie innert 24 Stunden eine Antwort mit einer persönlichen Vergleichsrechnung.
+      - Läuft noch ein Vertrag, prüfen wir mit Ihnen die Kündigungsfrist.
+      - Den neuen Vertrag schliessen Sie mit der SwiPay AG. Ab Eingang des Vertrags dauert es im Normalfall 72 Stunden bis zur ersten Zahlung, sofern alle Unterlagen vorliegen.
+      - Ihr Ansprechpartner begleitet die Inbetriebnahme: Kassenanbindung, WLAN, Testzahlung. Ihr Team sieht, wie Trinkgeld, Storno und Tagesabschluss funktionieren.
+      - Die Gutschrift erfolgt in Schweizer Franken auf Ihr Geschäftskonto. Die Abrechnung zeigt, über welchen Kanal die Umsätze kamen.
 
-      Der Berater, der installiert hat, bleibt Ihr Ansprechpartner mit Direktwahl. Den Start machen Sie über [Kontakt](/kontakt).
+      Ihr Ansprechpartner bleibt derselbe, auch nach der Inbetriebnahme. Den Start machen Sie über [Kontakt](/kontakt).
   - heading: Terminalwechsel ab 2027 rechtzeitig planen
     body: |
       Viele ältere Terminals verlieren voraussichtlich ab 2027 die Zulassung, weil die Kartenorganisationen neue Sicherheitsanforderungen stellen. Ob Ihr Terminal betroffen ist, sagen wir Ihnen anhand von Modell und Baujahr.
 
       Steht ein Wechsel an, ist das der Moment, auch die Gebühren neu zu verhandeln. Wer nur das Terminal tauscht und den alten Vertrag weiterlaufen lässt, verpasst den grösseren Hebel. Worauf Sie beim Vergleich achten müssen, steht unter [Zahlterminal Vergleich](/zahlterminal-vergleich).
 
-      Alle Terminals, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert. Bei der Miete sind Updates und Ersatzgerät enthalten, das Risiko einer späteren Nachrüstung tragen Sie damit nicht. Mehr unter [Zahlterminal mieten](/zahlterminal-mieten) und [Zahlterminal kaufen](/zahlterminal-kaufen).
+      Alle Terminals, die wir vermitteln, erfüllen PCI PTS 6.x und sind ep2-zertifiziert. Ob Sie mieten oder kaufen, entscheidet auch darüber, wer sich später um Updates und Ersatz kümmert. Was in welcher Variante enthalten ist, steht in der Offerte. Mehr unter [Zahlterminal mieten](/zahlterminal-mieten) und [Zahlterminal kaufen](/zahlterminal-kaufen).
 beispiel:
   aktiv: true
   titel: Beispiel Restaurant
+  branche: gastro
   umsatz: 25000
-  bon: 45
+  bon: 34
   kreditanteil: 35
   vergleich: gross
-  erklaerung: Für ein Restaurant mit Service am Tisch nehmen wir einen mittleren Bon an; die Werte sind Platzhalter und lassen sich im Rechner auf Ihre Abrechnung anpassen.
+  erklaerung: Der Kartenumsatz ist eine Annahme. Der Durchschnittsbon ist der Branchenwert, mit dem auch der Rechner von SwiPay arbeitet. Mit Ihren eigenen Zahlen rechnet der Rechner genauer.
 preisliste: []
 faq:
   - frage: Welches Zahlterminal passt zu meinem Betrieb?
@@ -75,10 +77,10 @@ faq:
       Im Alltag werden die Begriffe gleich verwendet. Als Kartenlesegerät werden oft kleine Leser bezeichnet, die an ein Handy gekoppelt werden. Ein Zahlterminal im Schweizer Sinn ist ep2-zertifiziert, läuft eigenständig und wickelt TWINT, PostFinance Card und die Kassenanbindung ab.
   - frage: Funktioniert das Terminal ohne WLAN?
     antwort: |
-      Die mobilen Modelle haben 4G eingebaut und brauchen kein WLAN. Fällt eines der beiden Netze aus, wechselt das Terminal auf das andere. Die stationären Modelle hängen am LAN oder WLAN; bei der Installation prüfen wir die Verbindung an Ihrem Kassenplatz.
+      Die mobilen Modelle haben 4G eingebaut und brauchen kein WLAN. Fällt eines der beiden Netze aus, wechselt das Terminal auf das andere. Die stationären Modelle hängen am LAN oder WLAN; bei der Inbetriebnahme prüfen wir die Verbindung an Ihrem Kassenplatz.
   - frage: Wie schnell ist das Terminal einsatzbereit?
     antwort: |
-      Die Offerte erhalten Sie innert 24 Stunden. Danach hängt der Termin von Ihrem bisherigen Vertrag ab. Ohne Kündigungsfrist installieren wir kurz nach der Vertragsunterzeichnung [Lieferfrist eintragen].
+      An Werktagen erhalten Sie innert 24 Stunden eine Antwort mit Vergleichsrechnung. Ab Eingang des Vertrags bei SwiPay dauert es im Normalfall 72 Stunden bis zur ersten Zahlung, sofern alle Unterlagen vorliegen. Läuft bei Ihrem bisherigen Anbieter noch eine Kündigungsfrist, richtet sich der Termin danach.
   - frage: Kann ich mein bestehendes Terminal weiterverwenden?
     antwort: |
       In Einzelfällen, wenn das Modell ep2-zertifiziert und für das SwiPay-Netzwerk freigegeben ist. Bei vielen älteren Terminals lohnt es sich wegen der Zulassungsfrage ab 2027 nicht. Schicken Sie uns Modell und Baujahr, wir sagen Ihnen, ob es geht.
@@ -89,8 +91,8 @@ bausteine:
   preisliste: true
 formular: none
 cta:
-  titel: Offerte innert 24 Stunden.
-  text: Schicken Sie uns Ihre letzte Abrechnung oder nennen Sie uns drei Zahlen. Sie erhalten eine Offerte, in der jede Gebühr steht.
+  titel: Antwort innert 24 Stunden an Werktagen.
+  text: Schicken Sie uns Ihre letzte Abrechnung oder nennen Sie uns drei Zahlen. Sie erhalten eine persönliche Vergleichsrechnung und eine Offerte, in der jede Gebühr steht.
   label: Offerte anfordern
   href: /kontakt
 verwandt:

@@ -44,10 +44,11 @@ sections:
     body: |
       Eine Website ist nach dem Start nicht fertig. Drei Dinge müssen laufend gepflegt werden. Erstens die Inhalte: Öffnungszeiten, Preise, Speisekarte, Team. Das erledigen Sie selbst, über eine Oberfläche ohne Programmierkenntnisse. Zweitens die Technik: Updates des Systems, Sicherheitspatches, Backups. Das übernimmt InfraOne im Rahmen eines Pflegevertrags oder nach Aufwand. Drittens die Sichtbarkeit: Google-Business-Profil aktuell halten, auf Bewertungen antworten, neue Fotos einstellen. Das kostet wenige Minuten pro Woche.
 
-      Wenn Sie keinen Pflegevertrag wollen, gehört die Website trotzdem Ihnen, inklusive Domain und Zugangsdaten. Sie können jederzeit wechseln. Das ist derselbe Grundsatz wie bei unseren Terminals: monatlich kündbar, keine Bindung über den Nutzen hinaus.
+      Wenn Sie keinen Pflegevertrag wollen, gehört die Website trotzdem Ihnen, inklusive Domain und Zugangsdaten. Sie können jederzeit wechseln.
 beispiel:
   aktiv: false
   titel: Keine Beispielrechnung
+  branche: sonstige
   umsatz: 0
   bon: 0
   kreditanteil: 0

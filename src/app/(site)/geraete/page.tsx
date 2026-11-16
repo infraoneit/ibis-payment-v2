@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getFaq, getGeraete, getKonditionen, getSite } from '@/lib/content';
+import { getFaq, getGeraete, getSite } from '@/lib/content';
 import { pageMeta } from '@/lib/seo';
 import { PageHero } from '@/components/content/PageHero';
 import { Section, Intro, Arrow } from '@/components/layout/Section';
@@ -8,12 +8,11 @@ import { Reveal } from '@/components/motion/Reveal';
 import { DeviceGrid } from '@/components/devices/DeviceGrid';
 import { Faq } from '@/components/content/Faq';
 import { CtaBand } from '@/components/content/CtaBand';
-import { chf, dateDE } from '@/lib/format';
 
 export const metadata: Metadata = pageMeta({
   title: 'Zahlterminals: mobil, stationär, Automat',
   description:
-    'Alle PayTec-Terminals mit technischen Daten, Miete und Kaufpreis: N62, N86, N96, CT20P, V3CT3, UN20. ep2-zertifiziert, TWINT direkt auf dem Terminal.',
+    'Alle PayTec-Terminals mit technischen Daten: N62, N86, N96, CT20P, V3CT3, UN20. ep2-zertifiziert, TWINT direkt auf dem Terminal. Miete oder Kauf, Preis in der Offerte.',
   path: '/geraete',
 });
 
@@ -24,7 +23,7 @@ const MORE = [
 ];
 
 export default async function GeraetePage() {
-  const [site, k, geraete, faq] = await Promise.all([getSite(), getKonditionen(), getGeraete(), getFaq('geraete')]);
+  const [site, geraete, faq] = await Promise.all([getSite(), getGeraete(), getFaq('geraete')]);
   const by = (cat: string) => geraete.filter((g) => g.kategorie === cat);
   return (
     <>
@@ -46,40 +45,20 @@ export default async function GeraetePage() {
 
       <Section id="automat" label="Automat" sub="Unbeaufsichtigt, rund um die Uhr.">
         <Reveal>
-          <Intro title="Automat: bezahlen ohne Personal." text="Einbauterminals für Verkaufsautomaten, Parking, Waschanlagen und Ladestationen. Offerte pro Projekt, weil Einbau und Anbindung je nach Automat verschieden sind." />
+          <Intro title="Automat: bezahlen ohne Personal." text="Einbauterminals für Verkaufsautomaten, Parking, Waschanlagen und Ladestationen. Einbau und Anbindung sind je nach Automat verschieden; das klären wir im Gespräch." />
         </Reveal>
         <DeviceGrid geraete={by('automat')} />
       </Section>
 
-      <Section label="Preise" sub={`Alle Modelle, eine Abrechnung. Stand ${dateDE(k.stand)}.`}>
+      <Section label="Miete oder Kauf" sub="Beides ist möglich.">
         <Reveal>
-          <table className="spec">
-            <caption className="sr-only">Miete und Kaufpreis pro Modell, exkl. MwSt.</caption>
-            <thead>
-              <tr>
-                <th scope="col">Modell</th>
-                <th scope="col">Bauform</th>
-                <th scope="col">Miete pro Monat</th>
-                <th scope="col">Kauf</th>
-              </tr>
-            </thead>
-            <tbody>
-              {geraete.map((g) => (
-                <tr key={g.slug}>
-                  <th scope="row" style={{ color: 'var(--ink)', fontWeight: 500 }}>
-                    <Link href={`/geraete/${g.slug}`}>{g.name}</Link>
-                  </th>
-                  <td>{g.specs[0]?.wert}</td>
-                  <td className="num">{g.mieteMonat != null ? chf(g.mieteMonat, 2) : 'nach Projekt'}</td>
-                  <td className="num">{g.kauf != null ? chf(g.kauf, 2) : 'nach Projekt'}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <Intro title="Den Preis für Ihr Terminal nennen wir in der Offerte." text="Welches Modell passt und ob Miete oder Kauf sinnvoller ist, hängt von Ihrem Betrieb ab. Sie erhalten beide Varianten nebeneinander, innert 24 Stunden an Werktagen." />
         </Reveal>
-        <p className="pl-note">
-          {k.hinweis} Miete inklusive Wartung, Updates und Ersatzgerät. Die Transaktionsgebühren sind für alle Modelle gleich: <Link href="/konditionen">Konditionen</Link>.
-        </p>
+        <Reveal>
+          <Link className="link" href="/konditionen">
+            Sätze für Debit- und Kreditkarten <Arrow />
+          </Link>
+        </Reveal>
       </Section>
 
       <Section tone="grey" id="kassen" label="Mehr als Terminals" sub="Kasse, Online und Handy aus derselben Hand.">
@@ -102,7 +81,7 @@ export default async function GeraetePage() {
         <Faq items={faq} />
       </Section>
 
-      <CtaBand title="Welches Terminal passt? Wir schauen es uns bei Ihnen an." text="Beratung vor Ort ist kostenlos und unverbindlich. Bringen Sie Ihre letzte Abrechnung mit, dann rechnen wir gleich nach." phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Welches Terminal passt? Wir schauen es uns bei Ihnen an." text="Die Beratung ist kostenlos und unverbindlich. Bringen Sie Ihre letzte Abrechnung mit, dann rechnen wir gleich nach." phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

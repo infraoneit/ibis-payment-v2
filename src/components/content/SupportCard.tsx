@@ -41,21 +41,21 @@ export function SupportStats() {
           <CountUp to={24} />
           <small>h</small>
         </b>
-        <span>Ersatzgerät bei Ihnen [Servicezusage bestätigen]</span>
+        <span>Antwort an Werktagen, mit Ihrer Vergleichsrechnung</span>
+      </div>
+      <div className="stat">
+        <b>
+          <CountUp to={72} />
+          <small>h</small>
+        </b>
+        <span>im Normalfall vom Vertrag bis zur ersten Zahlung</span>
       </div>
       <div className="stat">
         <b>
           <CountUp to={1} />
-          <small>Seite</small>
+          <small>Person</small>
         </b>
-        <span>Monatsabrechnung, jede Kartenart einzeln</span>
-      </div>
-      <div className="stat">
-        <b>
-          <CountUp to={0} />
-          <small>Tickets</small>
-        </b>
-        <span>Sie rufen direkt Ihren Berater an</span>
+        <span>Ihr Ansprechpartner für Abrechnung, Technik und Vertrag</span>
       </div>
     </div>
   );

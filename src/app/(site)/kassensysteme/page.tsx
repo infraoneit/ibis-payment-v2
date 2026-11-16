@@ -11,7 +11,7 @@ import { CtaBand } from '@/components/content/CtaBand';
 
 export const metadata: Metadata = pageMeta({
   title: 'Kassensystem mit Terminal aus einer Hand',
-  description: 'Kassensystem und Zahlterminal für Gastronomie und Detailhandel: Der Betrag geht automatisch von der Kasse ans Terminal (OPI, ZVT, KIT). Einrichtung vor Ort.',
+  description: 'Kassensystem und Zahlterminal für Gastronomie und Detailhandel: Der Betrag geht automatisch von der Kasse ans Terminal (OPI, ZVT, KIT). Begleitung bis zur Inbetriebnahme.',
   path: '/kassensysteme',
 });
 
@@ -45,7 +45,7 @@ export default async function KassenPage() {
           </div>
           <div>
             <span>Einrichtung</span>
-            <span>Artikel oder Speisekarte erfassen wir mit Ihnen, Drucker und WLAN richten wir ein, Ihr Team schulen wir vor Ort. {site.installation}</span>
+            <span>Artikel oder Speisekarte erfassen wir mit Ihnen, und wir begleiten Ihr Team bis zur Inbetriebnahme.</span>
           </div>
           <div>
             <span>Preis</span>
@@ -68,7 +68,7 @@ export default async function KassenPage() {
         <Faq items={faq} />
       </Section>
 
-      <CtaBand title="Welche Kasse passt? Wir schauen uns Ihren Ablauf an." text="Beratung vor Ort ist kostenlos. Bringen Sie Ihre heutige Kasse und Ihre letzte Kartenabrechnung mit." phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Welche Kasse passt? Wir schauen uns Ihren Ablauf an." text="Die Beratung ist kostenlos. Bringen Sie Ihre heutige Kasse und Ihre letzte Kartenabrechnung mit." phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

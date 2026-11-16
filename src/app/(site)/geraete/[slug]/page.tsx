@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getGeraet, getGeraete, getKonditionen, getSite } from '@/lib/content';
 import { pageMeta, SITE_URL } from '@/lib/seo';
-import { chf, dateDE } from '@/lib/format';
 import { Breadcrumbs } from '@/components/content/PageHero';
 import { Section, Arrow } from '@/components/layout/Section';
 import { Reveal } from '@/components/motion/Reveal';
@@ -23,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const g = await getGeraet(slug);
   if (!g) return {};
-  return pageMeta({ title: `${g.name} ${g.mieteMonat != null ? 'mieten oder kaufen' : 'für Automaten'}: ${KATEGORIE_LABEL[g.kategorie]}`, description: g.metaDescription || g.kurz, path: `/geraete/${slug}` });
+  return pageMeta({ title: `${g.name}: ${KATEGORIE_LABEL[g.kategorie]}, technische Daten`, description: g.metaDescription || g.kurz, path: `/geraete/${slug}` });
 }
 
 export default async function GeraetPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -31,10 +30,6 @@ export default async function GeraetPage({ params }: { params: Promise<{ slug: s
   const [g, all, k, site] = await Promise.all([getGeraet(slug), getGeraete(), getKonditionen(), getSite()]);
   if (!g) notFound();
   const others = all.filter((o) => o.slug !== g.slug && o.kategorie === g.kategorie).concat(all.filter((o) => o.slug !== g.slug && o.kategorie !== g.kategorie)).slice(0, 3);
-  const offers = [
-    g.mieteMonat != null && { '@type': 'Offer', name: 'Miete', price: g.mieteMonat.toFixed(2), priceCurrency: 'CHF', priceValidUntil: undefined, availability: 'https://schema.org/InStock', url: `${SITE_URL}/geraete/${g.slug}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: g.mieteMonat.toFixed(2), priceCurrency: 'CHF', unitText: 'Monat', valueAddedTaxIncluded: false } },
-    g.kauf != null && { '@type': 'Offer', name: 'Kauf', price: g.kauf.toFixed(2), priceCurrency: 'CHF', availability: 'https://schema.org/InStock', url: `${SITE_URL}/geraete/${g.slug}`, priceSpecification: { '@type': 'PriceSpecification', price: g.kauf.toFixed(2), priceCurrency: 'CHF', valueAddedTaxIncluded: false } },
-  ].filter(Boolean);
 
   return (
     <>
@@ -48,7 +43,6 @@ export default async function GeraetPage({ params }: { params: Promise<{ slug: s
           category: KATEGORIE_LABEL[g.kategorie],
           image: g.bild ? `${SITE_URL}${g.bild}` : `${SITE_URL}/og-image.png`,
           url: `${SITE_URL}/geraete/${g.slug}`,
-          ...(offers.length ? { offers } : {}),
           additionalProperty: g.specs.map((s) => ({ '@type': 'PropertyValue', name: s.label, value: s.wert })),
         }}
       />
@@ -68,33 +62,18 @@ export default async function GeraetPage({ params }: { params: Promise<{ slug: s
                 {g.kurz}
               </p>
               <div className="big" style={{ borderBottom: 0, paddingBottom: 0 }}>
-                {g.mieteMonat != null ? (
-                  <>
-                    <span className="l">Miete pro Monat, inklusive Wartung, Updates und Ersatzgerät</span>
-                    <span className="v num" style={{ fontSize: 'clamp(2.6rem,5vw,4.2rem)' }}>
-                      {chf(g.mieteMonat, 2)}
-                    </span>
-                    <span className="s">
-                      {g.kauf != null ? `Kauf ${chf(g.kauf, 2)}, inklusive Einrichtung und Herstellergarantie [Dauer bestätigen]. ` : ''}
-                      {k.hinweis} Stand {dateDE(k.stand)}.
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="l">Preis</span>
-                    <span className="v" style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}>
-                      Offerte pro Projekt
-                    </span>
-                    <span className="s">{g.preisHinweis}</span>
-                  </>
-                )}
+                <span className="l">Miete oder Kauf</span>
+                <span className="v" style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}>
+                  Preis in der Offerte
+                </span>
+                <span className="s">Sie erhalten die Offerte innert 24 Stunden an Werktagen.</span>
               </div>
               <div className="hero-ctas">
                 <Link className="btn btn-primary" href={`/kontakt?thema=Zahlterminal`}>
                   Offerte für {g.name}
                 </Link>
                 <Link className="link" href="/konditionen">
-                  Transaktionsgebühren ansehen <Arrow />
+                  Sätze für Debit und Kredit <Arrow />
                 </Link>
               </div>
               <div className="tags" aria-label="Typische Einsätze">

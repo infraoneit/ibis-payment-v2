@@ -15,12 +15,12 @@ import { ContactForm } from '@/components/forms/ContactForm';
 import { PartnerLogos } from '@/components/content/PartnerLogos';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Icon } from '@/components/ui/Icons';
-import { chf, dateDE } from '@/lib/format';
+import { dateDE } from '@/lib/format';
 
 export const metadata: Metadata = pageMeta({
   title: 'Zahlterminal Schweiz: Gebühren, die Sie verstehen',
   description:
-    'Zahlterminals, Kassen und Online-Zahlungen für Schweizer Betriebe. Preisliste öffentlich, Rechner mit Vergleich, ein Berater mit Direktwahl, Installation vor Ort.',
+    'Zahlterminals, Kassen und Online-Zahlungen für Betriebe in der ganzen Schweiz. Rechner mit Ihren Zahlen, ein fester Ansprechpartner, Offerte innert 24 Stunden an Werktagen.',
   path: '/',
 });
 
@@ -60,10 +60,10 @@ export default async function Home() {
                 <Icon.calculator style={{ width: 18, height: 18 }} /> Ersparnis berechnen
               </Link>
               <Link className="btn btn-outline" href="/konditionen">
-                Preisliste
+                Konditionen
               </Link>
               <Link className="link" href="/kontakt">
-                Beratung vor Ort <Arrow />
+                Beratung anfragen <Arrow />
               </Link>
             </div>
           </div>
@@ -77,26 +77,26 @@ export default async function Home() {
 
       <Section tone="grey" id="rechner" label="Rechner" sub={`Branche, Umsatz, Durchschnittsbon. Richtwerte exkl. MwSt., Stand ${dateDE(k.stand)}.`}>
         <Reveal>
-          <Intro title="Zahlen Sie zu viel? In 60 Sekunden wissen Sie es." text="Der Rechner zeigt, was Sie mit uns pro Monat und Jahr sparen. Die vollständige Preisliste steht auf der Seite Konditionen, nicht «ab», nicht «auf Anfrage»." />
+          <Intro title="Zahlen Sie zu viel? In 60 Sekunden wissen Sie es." text="Der Rechner zeigt, was Sie pro Monat und Jahr sparen können. Die Höchstsätze für Debit- und Kreditkarten stehen auf der Seite Konditionen, Ihre genauen Sätze in der Offerte." />
         </Reveal>
         <Reveal delay={1}>
           <Calculator stand={dateDE(k.stand)} />
         </Reveal>
         <Reveal>
           <Link className="link" href="/konditionen">
-            Vollständige Preisliste <Arrow />
+            Sätze ansehen <Arrow />
           </Link>
         </Reveal>
       </Section>
 
-      <Section id="geraete" label="Terminals" sub={`Terminals von PayTec, für den Schweizer Markt zertifiziert. Miete ab ${chf(k.miete)} pro Monat, Kauf ab ${chf(k.kauf ?? 0)}.`}>
+      <Section id="geraete" label="Terminals" sub="Terminals von PayTec, ep2-zertifiziert. Miete oder Kauf, den Preis nennen wir in der Offerte.">
         <Reveal>
-          <Intro title="Drei Bauformen. Wir sagen Ihnen vor Ort, welche zu Ihrem Ablauf passt." />
+          <Intro title="Drei Bauformen. Wir sagen Ihnen, welche zu Ihrem Ablauf passt." />
         </Reveal>
         <BauformGrid />
         <Reveal>
           <Link className="link" href="/geraete">
-            Alle Terminals mit Daten und Preisen <Arrow />
+            Alle Terminals mit technischen Daten <Arrow />
           </Link>
         </Reveal>
       </Section>
@@ -107,12 +107,12 @@ export default async function Home() {
         </Reveal>
       </Section>
 
-      <Section tone="dark" id="kontakt" label="Kontakt" sub="Offerte innert 24 Stunden. Verbindlich.">
+      <Section tone="dark" id="kontakt" label="Kontakt" sub="Antwort innert 24 Stunden an Werktagen.">
         <div className="support">
           <Reveal>
             <div className="intro">
               <h2>Schicken Sie uns Ihre letzte Abrechnung oder rufen Sie an.</h2>
-              <p>Sie erhalten dieselben Umsätze mit unseren Sätzen gerechnet, Zahl für Zahl. Auf Wunsch kommen wir direkt vorbei. Und wenn später etwas nicht läuft, nimmt derselbe Mensch ab.</p>
+              <p>Sie erhalten dieselben Umsätze mit unseren Sätzen gerechnet, Zahl für Zahl. Auf Wunsch kommen wir vorbei, in der ganzen Schweiz. Und wenn später etwas nicht läuft, haben Sie denselben Ansprechpartner.</p>
               <BeraterCard site={site} />
             </div>
           </Reveal>

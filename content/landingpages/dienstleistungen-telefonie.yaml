@@ -71,6 +71,7 @@ sections:
 beispiel:
   aktiv: false
   titel: Keine Beispielrechnung
+  branche: sonstige
   umsatz: 0
   bon: 0
   kreditanteil: 0
@@ -95,7 +96,7 @@ faq:
 
     '
 - frage: Wie lange bin ich gebunden?
-  antwort: 'Die Anlage ist monatlich kündbar, nach demselben Grundsatz wie das Terminal. Gekaufte Tischtelefone gehören Ihnen. Die genauen Bedingungen stehen in der Offerte von [Telefonie-Partner].
+  antwort: 'Die Anlage ist monatlich kündbar. Gekaufte Tischtelefone gehören Ihnen. Die genauen Bedingungen stehen in der Offerte von [Telefonie-Partner].
 
     '
 bausteine:

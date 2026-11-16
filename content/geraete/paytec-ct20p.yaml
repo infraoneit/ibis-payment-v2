@@ -36,10 +36,7 @@ specs:
   wert: PCI PTS 6.x, EMV L1/L2, EMV CL1, ep2 (Schweiz)
 - label: Kassenanbindung
   wert: KIT (Cloud, API, JSON, TLV), ZVT-LAN, OPI-LAN
-mieteMonat: 24
-kauf: 590
-preisHinweis: Miete inklusive Wartung, Updates und Ersatzgerät. Preise exkl. MwSt.
 datenblatt: https://www.paytec.ch/fileadmin/produkte/CT20p/ct20p-data-sheets-2025-deutsch.pdf
 bild: /images/geraete/paytec-ct20p.webp
 bildAlt: PayTec Smart-POS CT20P, stationäres Zahlterminal mit PIN-Pad
-metaDescription: 'PayTec CT20P bei ibis payment: stationäres Zahlterminal mit PIN-Pad, LAN und WLAN, Kassenanbindung über OPI, ZVT und KIT. Technische Daten, Miete und Kaufpreis.'
+metaDescription: 'PayTec CT20P bei ibis payment: stationäres Zahlterminal mit PIN-Pad, LAN und WLAN, Kassenanbindung über OPI, ZVT und KIT. Technische Daten und Einsatz.'

@@ -64,7 +64,7 @@ export function Footer({ site }: { site: Site }) {
               <Link href="/datenschutz">Datenschutz</Link>
             </li>
             <li>
-              <Link href="/agb">AGB</Link>
+              <Link href="/agb">Vertrag und Bedingungen</Link>
             </li>
             <li>
               Umsetzung:{' '}

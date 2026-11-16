@@ -27,7 +27,7 @@ npm run start
 | Pfad | Inhalt |
 |---|---|
 | `content/site.yaml` | Firma, Kontakt, Berater, Servicezusagen, Partner, Vertragspartner |
-| `content/konditionen.yaml` | **Einzige Datenquelle für Preise.** Preisliste, Rechner, Gebühren-Zerlegung und Beispielrechnungen lesen hier |
+| `content/konditionen.yaml` | **Einzige Datenquelle für die Sätze** (Höchstsätze Debit und Kredit, Quelle, weitere Positionen als Text) |
 | `content/geraete/*.yaml` | Terminals mit technischen Daten, Miete, Kauf, Datenblatt |
 | `content/faq/*.yaml` | FAQ nach Bereich (konditionen, support, geraete, kassen, online, softpos) |
 | `content/referenzen/*.yaml` | Kundenstimmen; erscheinen nur mit `aktiv: true` |
@@ -43,19 +43,29 @@ npm run start
 | `public/__forms.html` | Formulardefinitionen für Netlify Forms |
 | `netlify.toml` | Build, Redirects, Security-Headers, Caching |
 
-## Preise pflegen
+## Sätze pflegen
 
-1. `/keystatic` aufrufen, «Konditionen (Preisliste und Rechner)» öffnen.
-2. Sätze ändern, **Stand der Preise** auf das aktuelle Datum setzen, speichern.
-3. Rechner, Preisliste, Gebühren-Zerlegung, Beispielrechnungen auf den Branchenseiten und der Geräteseite aktualisieren sich beim nächsten Deploy automatisch.
+1. `/keystatic` aufrufen, «Konditionen (Höchstsätze)» öffnen.
+2. Höchstsatz für Debit oder Kredit ändern, **Stand** auf das aktuelle Datum setzen, Quelle nachführen, speichern.
+3. Die Tabelle auf der Seite Konditionen, die Fakten-Leiste und der Auszug auf den Unterseiten aktualisieren sich beim nächsten Deploy automatisch.
 
-Gerätepreise stehen pro Modell in «Terminals und Geräte». Der Ersparnis-Rechner liest **nicht** aus `konditionen.yaml`, sondern rechnet mit dem Modell des SwiPay-Partnerrechners (siehe unten); die Vergleichswerte in `konditionen.yaml` bleiben für die Gebühren-Zerlegung erhalten.
+Terminal-Preise gibt es im CMS nicht mehr (Wunsch des Kunden vom 16. November 2026). Der Ersparnis-Rechner liest **nicht** aus `konditionen.yaml`, sondern rechnet mit dem Modell des SwiPay-Partnerrechners (siehe unten). Achtung: In den Texten der Unterseiten stehen die Höchstsätze ebenfalls ausgeschrieben; bei einer Änderung dort nachführen (Suche nach «0.85» und «1.5 %» in `content/`).
 
 Platzhalter sind in eckigen Klammern geschrieben, z. B. `[052 000 00 00]`. Vollständige Liste: `docs/07-platzhalter.md` im Projektordner darüber.
 
 ## Dark Mode
 
 Die Website startet immer im hellen Design, unabhängig von der Systemeinstellung. In den Darkmode kommt man nur über den Umschalter im Header. Die Wahl liegt im `localStorage` (Schlüssel `theme`), kein Cookie. Farben sind ausschliesslich Tokens in `src/app/globals.css` (`:root` hell, `:root[data-theme="dark"]` dunkel).
+
+## Zahlen-Regeln (seit 16. November 2026)
+
+Auf der Website stehen nur noch belegte Zahlen. Die Regeln und alle Quellen stehen in `IBIS_Payment/docs/08-zahlen-regeln.md`. Kurzfassung:
+
+- **Transaktionsgebühren:** nur die Höchstsätze von PayTec (Debit höchstens 0.85 %, Kredit höchstens 1.5 %), gepflegt in `content/konditionen.yaml`. Alles Weitere steht «in der Offerte».
+- **Terminal-Preise** (Miete, Kauf) werden nirgends genannt.
+- **Übrige Zahlen** nur, wenn SwiPay sie veröffentlicht (24 Stunden an Werktagen, 72 Stunden im Normalfall, über 40 Zahlungsmethoden, rund 30 Vertriebspartner).
+- **Verträge** schliesst die SwiPay AG; ibis verspricht keine eigenen Vertragsbedingungen (Laufzeit, Kündigung, Mindestgebühr).
+- **Einsatzgebiet:** ganze Schweiz, kein regionaler Schwerpunkt.
 
 ## Rechnermodell
 
