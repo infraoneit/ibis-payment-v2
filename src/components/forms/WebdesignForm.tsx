@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { submitForm, isEmail } from '@/lib/forms';
+import { submitForm, isEmail, FormGuardError, HONEYPOT } from '@/lib/forms';
 
 const BRANCHEN = ['Restaurant, Café, Bar', 'Coiffeur, Kosmetik', 'Praxis, Gesundheit', 'Detailhandel, Laden', 'Handwerk, Bau', 'Dienstleistung, Büro', 'Andere'];
 
@@ -12,6 +12,7 @@ export function WebdesignForm() {
   const router = useRouter();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
+  const [errMsg, setErrMsg] = useState('');
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -25,7 +26,8 @@ export function WebdesignForm() {
     try {
       await submitForm('webdesign', form);
       router.push('/danke?f=webdesign');
-    } catch {
+    } catch (err) {
+      setErrMsg(err instanceof FormGuardError ? err.message : '');
       setState('error');
     }
   };
@@ -35,7 +37,7 @@ export function WebdesignForm() {
       <input type="hidden" name="seite" value={typeof window !== 'undefined' ? window.location.pathname : ''} />
       <p className="hp" aria-hidden="true">
         <label>
-          Bitte leer lassen <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Bitte leer lassen <input name={HONEYPOT} tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       <div className="r2">
@@ -89,7 +91,7 @@ export function WebdesignForm() {
       </div>
       {state === 'error' && (
         <p className="err" role="alert">
-          Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie direkt an InfraOne über infraone.ch.
+          {errMsg || 'Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie direkt an InfraOne über infraone.ch.'}
         </p>
       )}
     </form>

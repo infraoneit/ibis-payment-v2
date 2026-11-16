@@ -55,7 +55,7 @@ Platzhalter sind in eckigen Klammern geschrieben, z. B. `[052 000 00 00]`. Volls
 
 ## Dark Mode
 
-Die Website folgt der Systemeinstellung (`prefers-color-scheme`) und bietet im Header einen Umschalter. Die Wahl liegt im `localStorage` (Schlüssel `theme`), kein Cookie. Farben sind ausschliesslich Tokens in `src/app/globals.css` (`:root` hell, `:root[data-theme="dark"]` dunkel).
+Die Website startet immer im hellen Design, unabhängig von der Systemeinstellung. In den Darkmode kommt man nur über den Umschalter im Header. Die Wahl liegt im `localStorage` (Schlüssel `theme`), kein Cookie. Farben sind ausschliesslich Tokens in `src/app/globals.css` (`:root` hell, `:root[data-theme="dark"]` dunkel).
 
 ## Rechnermodell
 
@@ -77,7 +77,7 @@ Prüfwerte (Gastronomie, 120'000 pro Jahr, Bon 50): ohne Angabe CHF 80–120 pro
 
 1. Repository auf GitHub, Site in Netlify anlegen («Import from Git»). `netlify.toml` setzt Build-Befehl und Plugin.
 2. Domain `ibis-payment.ch` als Primary Domain, `www.ibis-payment.ch` und `ibis-mgmt.ch` als Alias hinzufügen (Redirects stehen in `netlify.toml`). HTTPS wird von Netlify ausgestellt.
-3. **Forms:** Nach dem ersten Deploy unter Site → Forms die vier Formulare prüfen (`kontakt`, `abrechnung`, `webdesign`, `praemiencheck`). Unter Forms → Notifications je eine E-Mail-Benachrichtigung anlegen: `kontakt`, `abrechnung`, `praemiencheck` an info@ibis-payment.ch, `webdesign` an die Adresse von InfraOne. Spam-Filter (Akismet) ist standardmässig aktiv, zusätzlich Honeypot-Feld `bot-field`.
+3. **Forms:** Nach dem ersten Deploy unter Site → Forms die vier Formulare prüfen (`kontakt`, `abrechnung`, `webdesign`, `praemiencheck`). Unter Forms → Notifications je eine E-Mail-Benachrichtigung anlegen: `kontakt`, `abrechnung`, `praemiencheck` an info@ibis-payment.ch, `webdesign` an die Adresse von InfraOne. Spam-Filter (Akismet) ist standardmässig aktiv. Zusätzlicher Bot-Schutz ohne Captcha in `src/lib/forms.ts`: Köderfeld `homepage` (auch serverseitig über `netlify-honeypot`), Zeitsperre von 3 Sekunden ab der ersten Eingabe, höchstens 2 Links pro Nachricht, höchstens 3 Anfragen pro 10 Minuten und Browser. Kommt trotzdem Spam durch, lässt sich Cloudflare Turnstile mit serverseitiger Prüfung nachrüsten.
 4. **Keystatic im GitHub-Modus** (damit der Kunde Preise selbst pflegt):
    - Lokal `npm run dev` starten, `/keystatic` öffnen und dem Assistenten «Set up GitHub» folgen; er erstellt eine GitHub App und schreibt `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET` in `.env.local`.
    - Diese drei Werte plus `KEYSTATIC_GITHUB_REPO=owner/repo` als Environment Variables in Netlify setzen und neu deployen.

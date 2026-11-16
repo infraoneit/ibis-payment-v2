@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { getSite } from '@/lib/content';
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { socialUrls } from '@/components/layout/SocialLinks';
 
 export default async function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const site = await getSite();
@@ -19,6 +20,7 @@ export default async function SiteLayout({ children }: Readonly<{ children: Reac
           logo: `${SITE_URL}/icon-512.png`,
           email: site.email,
           telephone: site.phoneHref,
+          ...(socialUrls(site).length ? { sameAs: socialUrls(site) } : {}),
           address: { '@type': 'PostalAddress', streetAddress: site.street, postalCode: site.zip, addressLocality: site.city, addressCountry: 'CH' },
         }}
       />

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { submitForm, isEmail } from '@/lib/forms';
+import { submitForm, isEmail, FormGuardError, HONEYPOT } from '@/lib/forms';
 
 const THEMEN = ['Zahlterminal', 'Kassensystem', 'Online-Zahlungen', 'Handy als Terminal', 'Website und IT', 'Telefonie', 'Versicherungen', 'Treuhand', 'Mehreres davon'];
 
@@ -14,6 +14,7 @@ export function ContactForm({ phone, phoneHref, defaultThema }: { phone: string;
   const [thema, setThema] = useState(defaultThema ?? (params.get('thema') && THEMEN.includes(params.get('thema')!) ? params.get('thema')! : THEMEN[0]));
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
+  const [errMsg, setErrMsg] = useState('');
 
   // Werte aus dem Rechner übernehmen
   useEffect(() => {
@@ -40,7 +41,8 @@ export function ContactForm({ phone, phoneHref, defaultThema }: { phone: string;
     try {
       await submitForm('kontakt', form);
       router.push('/danke?f=kontakt');
-    } catch {
+    } catch (err) {
+      setErrMsg(err instanceof FormGuardError ? err.message : '');
       setState('error');
     }
   };
@@ -52,7 +54,7 @@ export function ContactForm({ phone, phoneHref, defaultThema }: { phone: string;
       <input type="hidden" name="seite" value={typeof window !== 'undefined' ? window.location.pathname : ''} />
       <p className="hp" aria-hidden="true">
         <label>
-          Bitte leer lassen <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Bitte leer lassen <input name={HONEYPOT} tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       <div className="r2">
@@ -105,7 +107,7 @@ export function ContactForm({ phone, phoneHref, defaultThema }: { phone: string;
       </div>
       {state === 'error' && (
         <p className="err" role="alert">
-          Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie an info@ibis-payment.ch.
+          {errMsg || 'Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie an info@ibis-payment.ch.'}
         </p>
       )}
     </form>

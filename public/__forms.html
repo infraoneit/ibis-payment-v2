@@ -5,9 +5,9 @@
 <!-- Diese Datei wird nicht angezeigt. Netlify liest die Formulare beim Deploy aus und nimmt die Eingaben der React-Formulare entgegen.
      Benachrichtigungen (E-Mail an info@ibis-payment.ch bzw. an InfraOne für "webdesign") werden im Netlify-Dashboard unter Forms > Notifications eingerichtet. -->
 
-<form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="homepage">
   <input type="hidden" name="form-name" value="kontakt">
-  <input name="bot-field">
+  <input name="homepage">
   <input name="name" type="text">
   <input name="betrieb" type="text">
   <input name="telefon" type="tel">
@@ -18,9 +18,9 @@
   <input name="seite" type="text">
 </form>
 
-<form name="abrechnung" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+<form name="abrechnung" method="POST" data-netlify="true" netlify-honeypot="homepage" enctype="multipart/form-data">
   <input type="hidden" name="form-name" value="abrechnung">
-  <input name="bot-field">
+  <input name="homepage">
   <input name="name" type="text">
   <input name="betrieb" type="text">
   <input name="email" type="email">
@@ -30,9 +30,9 @@
   <input name="seite" type="text">
 </form>
 
-<form name="webdesign" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="webdesign" method="POST" data-netlify="true" netlify-honeypot="homepage">
   <input type="hidden" name="form-name" value="webdesign">
-  <input name="bot-field">
+  <input name="homepage">
   <input name="name" type="text">
   <input name="betrieb" type="text">
   <input name="telefon" type="tel">
@@ -43,9 +43,9 @@
   <input name="seite" type="text">
 </form>
 
-<form name="praemiencheck" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<form name="praemiencheck" method="POST" data-netlify="true" netlify-honeypot="homepage">
   <input type="hidden" name="form-name" value="praemiencheck">
-  <input name="bot-field">
+  <input name="homepage">
   <select name="branche"><option>Restaurant</option></select>
   <select name="mitarbeitende"><option>Nur ich</option></select>
   <input name="email" type="email">

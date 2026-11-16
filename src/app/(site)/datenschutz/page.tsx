@@ -52,7 +52,7 @@ export default async function DatenschutzPage() {
       </Section>
       <Section label="5. Externe Links" tight>
         <div className="prose prose-sm">
-          <p>Links auf swipay.ch, paytec.ch und infraone.ch führen auf Websites Dritter mit eigenen Datenschutzbestimmungen. Beim Anklicken verlassen Sie unsere Website.</p>
+          <p>Links auf die Websites unserer Partner (SwiPay, PayTec, Gnehm Kassensysteme, bk POS, Sulser Waagen, InfraOne) und auf unsere Profile in sozialen Netzwerken wie Instagram führen auf Websites Dritter mit eigenen Datenschutzbestimmungen. Wir binden keine Social-Media-Plugins ein: Daten werden erst übertragen, wenn Sie einen solchen Link anklicken. Beim Anklicken verlassen Sie unsere Website.</p>
         </div>
       </Section>
       <Section label="6. Ihre Rechte" tight>

@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Zahlterminals, Kassensysteme und Online-Zahlungen für Schweizer Betriebe.',
     start_url: '/',
     display: 'browser',
-    background_color: '#ffffff',
-    theme_color: '#ffffff',
+    background_color: '#ddd1bb',
+    theme_color: '#ddd1bb',
     lang: 'de-CH',
     icons: [
       { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },

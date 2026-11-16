@@ -6,6 +6,7 @@ import { Section, Intro } from '@/components/layout/Section';
 import { HubGrid } from '@/components/content/HubGrid';
 import { CtaBand } from '@/components/content/CtaBand';
 import { Reveal } from '@/components/motion/Reveal';
+import { BranchStack } from '@/components/content/BranchArt';
 
 export const metadata: Metadata = pageMeta({
   title: 'Branchen: welches Terminal zu welchem Betrieb passt',
@@ -21,9 +22,9 @@ export default async function BranchenPage() {
   const regionen = all.filter((p) => p.cluster === 'regional').sort((a, b) => rorder.indexOf(a.pfad) - rorder.indexOf(b.pfad));
   return (
     <>
-      <PageHero label="Branchen" title="Jeder Betrieb kassiert anders." lead="Am Tisch, am Tresen, am Marktstand oder am Empfang: Wir zeigen pro Branche, welches Terminal passt, was die Kasse können muss und was eine typische Abrechnung kostet." crumbs={[{ name: 'Branchen', href: '/branchen' }]} />
+      <PageHero label="Branchen" title="Jeder Betrieb kassiert anders." lead="Am Tisch, am Tresen, am Marktstand oder am Empfang: Wir zeigen pro Branche, welches Terminal passt, was die Kasse können muss und was eine typische Abrechnung kostet." crumbs={[{ name: 'Branchen', href: '/branchen' }]} visual={<BranchStack />} />
       <Section label="Branchen" sub="Mit Beispielrechnung aus den aktuellen Konditionen.">
-        <HubGrid pages={branchen} />
+        <HubGrid pages={branchen} cta={{ title: 'Ihre Branche fehlt?', text: 'Bäckerei, Fitnessstudio, Kiosk, Verein oder Hofladen: Terminals und Konditionen sind dieselben. Wir zeigen Ihnen, was bei Ihnen passt.', label: 'Beratung anfragen', href: '/kontakt' }} />
       </Section>
       <Section tone="grey" label="Regionen" sub="Beratung und Installation vor Ort.">
         <Reveal>
@@ -31,7 +32,7 @@ export default async function BranchenPage() {
         </Reveal>
         <HubGrid pages={regionen} />
       </Section>
-      <CtaBand title="Ihre Branche fehlt? Fragen Sie trotzdem." text="Bäckerei, Fitnessstudio, Kiosk, Verein oder Hofladen: Die Terminals und Konditionen sind dieselben, der Ablauf vor Ort unterscheidet sich. Ein Gespräch kostet nichts." phone={site.phone} phoneHref={site.phoneHref} />
+      <CtaBand title="Welches Terminal passt zu Ihrem Betrieb?" text="Wir schauen uns Ihren Ablauf vor Ort an. Bringen Sie Ihre letzte Abrechnung mit, dann rechnen wir gleich nach. Ein Gespräch kostet nichts." phone={site.phone} phoneHref={site.phoneHref} />
     </>
   );
 }

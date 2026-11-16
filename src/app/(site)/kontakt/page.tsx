@@ -6,6 +6,7 @@ import { pageMeta } from '@/lib/seo';
 import { PageHero } from '@/components/content/PageHero';
 import { Section } from '@/components/layout/Section';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { SocialLinks, socialUrls } from '@/components/layout/SocialLinks';
 
 export const metadata: Metadata = pageMeta({
   title: 'Kontakt: Offerte innert 24 Stunden',
@@ -46,6 +47,12 @@ export default async function KontaktPage() {
                 <span>Einsatzgebiet</span>
                 <b>{site.region}</b>
               </div>
+              {socialUrls(site).length > 0 && (
+                <div>
+                  <span>Folgen</span>
+                  <SocialLinks site={site} label />
+                </div>
+              )}
             </div>
             <p className="pl-note">Beratung vor Ort ist kostenlos und unverbindlich. Wenn Sie Ihre letzte Abrechnung gleich mitschicken wollen: <Link href="/konditionen#abrechnung">Abrechnung einreichen</Link>.</p>
           </div>

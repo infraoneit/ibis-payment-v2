@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import { DeviceMini, type MiniKind } from './DeviceMini';
 
-/** Produktfoto über next/image, bis dahin Platzhalter mit korrektem Seitenverhältnis und 3D-Miniatur.
- *  Fotos nur mit Freigabe von SwiPay oder PayTec (Presse-Kit anfragen). */
+/** Produktfoto über next/image (Fotos von den PayTec-Produktseiten), sonst Platzhalter mit 3D-Miniatur. */
 export function ProductImage({ src, alt, name, kind, wide }: { src?: string | null; alt: string; name: string; kind: MiniKind; wide?: boolean }) {
   return (
     <div className={`placeholder-img${wide ? ' wide' : ''}`}>

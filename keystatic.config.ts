@@ -42,6 +42,13 @@ export default config({
         openingHours: fields.text({ label: 'Erreichbarkeit (Text)' }),
         openingHoursSchema: fields.text({ label: 'Öffnungszeiten für Google (z. B. Mo-Fr 08:00-18:00)' }),
         vertretung: fields.text({ label: 'Vertretungsberechtigte Person' }),
+        social: fields.object(
+          {
+            instagram: fields.text({ label: 'Instagram (ganzer Link, leer = Icon wird nicht angezeigt)' }),
+            linkedin: fields.text({ label: 'LinkedIn (ganzer Link, leer = Icon wird nicht angezeigt)' }),
+          },
+          { label: 'Soziale Netzwerke' }
+        ),
         berater: fields.object(
           {
             name: fields.text({ label: 'Name' }),
@@ -49,9 +56,10 @@ export default config({
             region: fields.text({ label: 'Region' }),
             phone: fields.text({ label: 'Direktwahl (Anzeige)' }),
             phoneHref: fields.text({ label: 'Direktwahl (international)' }),
+            email: fields.text({ label: 'E-Mail' }),
             photo: fields.image({ label: 'Foto', directory: 'public/images/team', publicPath: '/images/team/' }),
           },
-          { label: 'Berater mit Direktwahl' }
+          { label: 'Ansprechperson mit Direktwahl (Startseite, Kontakt)' }
         ),
         service: fields.object(
           {
@@ -68,6 +76,8 @@ export default config({
           {
             acquiring: fields.text({ label: 'Acquiring-Partner' }),
             terminals: fields.text({ label: 'Terminal-Hersteller' }),
+            kassen: fields.text({ label: 'Kassensysteme' }),
+            waagen: fields.text({ label: 'Waagen' }),
             it: fields.text({ label: 'Website und IT' }),
             telefonie: fields.text({ label: 'Telefonie' }),
             versicherung: fields.text({ label: 'Versicherungen' }),
@@ -221,6 +231,7 @@ export default config({
       schema: {
         name: fields.slug({ name: { label: 'Name' } }),
         rolle: fields.text({ label: 'Funktion' }),
+        email: fields.text({ label: 'E-Mail' }),
         foto: fields.image({ label: 'Foto', directory: 'public/images/team', publicPath: '/images/team/' }),
         reihenfolge: fields.number({ label: 'Reihenfolge' }),
       },

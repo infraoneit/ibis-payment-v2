@@ -12,6 +12,7 @@ import { Calculator } from '@/components/pricing/Calculator';
 import { BauformGrid } from '@/components/devices/DeviceGrid';
 import { BeraterCard } from '@/components/content/SupportCard';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { PartnerLogos } from '@/components/content/PartnerLogos';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Icon } from '@/components/ui/Icons';
 import { chf, dateDE } from '@/lib/format';
@@ -97,6 +98,12 @@ export default async function Home() {
           <Link className="link" href="/geraete">
             Alle Terminals mit Daten und Preisen <Arrow />
           </Link>
+        </Reveal>
+      </Section>
+
+      <Section tone="grey" id="partner" label="Partner" sub="Acquiring, Terminals, Kassen und Waagen aus der Schweiz.">
+        <Reveal>
+          <PartnerLogos />
         </Reveal>
       </Section>
 

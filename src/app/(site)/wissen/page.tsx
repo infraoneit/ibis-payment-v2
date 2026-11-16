@@ -22,7 +22,7 @@ export default async function WissenPage() {
     <>
       <PageHero label="Wissen" title="Kartenzahlung verstehen, bevor Sie unterschreiben." lead="Was eine Gebühr enthält, wer im Hintergrund beteiligt ist, welche Fehler Betriebe beim Anbieterwechsel machen. Geschrieben für Inhaber, nicht für Fachleute." crumbs={[{ name: 'Wissen', href: '/wissen' }]} />
       <Section label="Grundlagen" sub="Fünf Artikel, die den Markt erklären.">
-        <HubGrid pages={wissen} />
+        <HubGrid pages={wissen} cta={{ title: 'Wie viel sparen Sie konkret?', text: 'Der Rechner zeigt in einer Minute, was Ihre Umsätze bei uns pro Monat und Jahr kosten würden.', label: 'Zum Rechner', href: '/konditionen#rechner' }} />
       </Section>
       <Section tone="grey" label="Entscheiden" sub="Mieten, kaufen, vergleichen, wechseln.">
         <Reveal>

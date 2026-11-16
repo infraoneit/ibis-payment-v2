@@ -39,6 +39,6 @@ mieteMonat: null
 kauf: null
 preisHinweis: Offerte pro Projekt, weil Einbau und Anbindung je nach Automat verschieden sind.
 datenblatt: https://www.paytec.ch/fileadmin/pdf/un20-data-sheet-2026-eng.pdf
-bild: null
+bild: /images/geraete/paytec-un20.webp
 bildAlt: PayTec UN20, Einbauterminal für Automaten
 metaDescription: 'PayTec UN20 bei ibis payment: wetterfestes Einbauterminal für Verkaufsautomaten, Parking und Ladestationen, IP65, MDB und RS232. Technische Daten und Offerte.'

@@ -5,20 +5,19 @@ import { Icon } from './Icons';
 
 type Theme = 'light' | 'dark';
 
-function systemTheme(): Theme {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
+const THEME_COLOR: Record<Theme, string> = { light: '#ddd1bb', dark: '#0f0d0b' };
 
-/** Hell/Dunkel-Umschalter. Ohne Auswahl gilt die Systemeinstellung; die Wahl wird im Browser gespeichert (kein Cookie). */
+/** Hell/Dunkel-Umschalter. Standard ist immer Hell, die Systemeinstellung wird nicht übernommen.
+ *  Nur wer auf den Knopf drückt, kommt in den Darkmode; die Wahl wird im Browser gespeichert (kein Cookie). */
 export function ThemeToggle({ className = 'icon-btn' }: { className?: string }) {
-  const [theme, setTheme] = useState<Theme | null>(null);
+  const [theme, setTheme] = useState<Theme>('light');
   useEffect(() => {
-    const attr = document.documentElement.getAttribute('data-theme') as Theme | null;
-    setTheme(attr ?? systemTheme());
+    setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
   }, []);
   const toggle = () => {
-    const next: Theme = (theme ?? systemTheme()) === 'dark' ? 'light' : 'dark';
+    const next: Theme = theme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLOR[next]);
     try {
       localStorage.setItem('theme', next);
     } catch {}
@@ -32,5 +31,5 @@ export function ThemeToggle({ className = 'icon-btn' }: { className?: string }) 
   );
 }
 
-/** Setzt data-theme vor dem ersten Rendern, damit es nicht flackert. */
-export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
+/** Setzt data-theme vor dem ersten Rendern, damit es nicht flackert: Dunkel nur, wenn es vorher per Knopf gewählt wurde. */
+export const THEME_INIT_SCRIPT = `(function(){var d=document.documentElement;try{if(localStorage.getItem('theme')==='dark'){d.setAttribute('data-theme','dark');var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#0f0d0b');return;}}catch(e){}d.setAttribute('data-theme','light');})();`;

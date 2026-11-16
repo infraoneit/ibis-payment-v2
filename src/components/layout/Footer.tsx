@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FOOTER_COLUMNS } from '@/lib/nav';
 import { LogoWordmark } from '@/components/brand/Logo';
 import type { Site } from '@/lib/content';
+import { SocialLinks } from '@/components/layout/SocialLinks';
 
 export function Footer({ site }: { site: Site }) {
   const year = new Date().getFullYear();
@@ -25,6 +26,7 @@ export function Footer({ site }: { site: Site }) {
               {' · '}
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </p>
+            <SocialLinks site={site} />
             <div className="badges" aria-label="Merkmale">
               <span className="badge">ep2-zertifizierte Terminals</span>
               <span className="badge">Schweizer Acquiring</span>

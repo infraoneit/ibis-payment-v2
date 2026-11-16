@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { Site } from '@/lib/content';
 import { CountUp } from '@/components/motion/CountUp';
 
-/** Berater mit Foto und Direktwahl. */
+/** Ansprechperson mit Foto, Direktwahl und E-Mail. */
 export function BeraterCard({ site }: { site: Site }) {
   const b = site.berater;
   return (
@@ -13,8 +13,14 @@ export function BeraterCard({ site }: { site: Site }) {
       <div className="who">
         <b>{b.name}</b>
         <span>
-          {b.role}, {b.region}
+          {b.role}
+          {b.region ? `, ${b.region}` : ''}
         </span>
+        {b.email && (
+          <a className="mail" href={`mailto:${b.email}`}>
+            {b.email}
+          </a>
+        )}
         <a className="t num" href={`tel:${b.phoneHref}`}>
           <span className="ring" aria-hidden="true">
             <i />

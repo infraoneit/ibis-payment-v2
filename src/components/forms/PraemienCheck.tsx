@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { submitForm, isEmail } from '@/lib/forms';
+import { submitForm, isEmail, FormGuardError, HONEYPOT } from '@/lib/forms';
 
 const BRANCHEN = ['Restaurant, Café, Bar', 'Detailhandel, Laden', 'Coiffeur, Kosmetik', 'Praxis, Gesundheit', 'Handwerk, Bau', 'Dienstleistung, Büro', 'Andere'];
 const MA = ['Nur ich', '2 bis 5', '6 bis 15', '16 bis 50', 'mehr als 50'];
@@ -33,8 +33,8 @@ export function PraemienCheck() {
     try {
       await submitForm('praemiencheck', form);
       setResult(`Danke. Unser Versicherungspartner meldet sich innert zwei Werktagen und prüft: ${items.join(', ')}.`);
-    } catch {
-      setErr('Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.');
+    } catch (e) {
+      setErr(e instanceof FormGuardError ? e.message : 'Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut.');
     }
     setState('idle');
   };
@@ -53,7 +53,7 @@ export function PraemienCheck() {
           <input type="hidden" name="seite" value={typeof window !== 'undefined' ? window.location.pathname : ''} />
           <p className="hp" aria-hidden="true">
             <label>
-              Bitte leer lassen <input name="bot-field" tabIndex={-1} autoComplete="off" />
+              Bitte leer lassen <input name={HONEYPOT} tabIndex={-1} autoComplete="off" />
             </label>
           </p>
           <div className="r3">

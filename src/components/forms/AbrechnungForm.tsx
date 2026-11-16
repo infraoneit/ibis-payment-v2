@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { submitForm, isEmail, MAX_UPLOAD_BYTES, UPLOAD_TYPES } from '@/lib/forms';
+import { submitForm, isEmail, MAX_UPLOAD_BYTES, UPLOAD_TYPES, FormGuardError, HONEYPOT } from '@/lib/forms';
 
 /** Abrechnungs-Upload: Letzte Monatsabrechnung als PDF oder Foto, Vergleich innert 24 Stunden. */
 export function AbrechnungForm() {
   const router = useRouter();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
+  const [errMsg, setErrMsg] = useState('');
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,7 +31,8 @@ export function AbrechnungForm() {
     try {
       await submitForm('abrechnung', form);
       router.push('/danke?f=abrechnung');
-    } catch {
+    } catch (err) {
+      setErrMsg(err instanceof FormGuardError ? err.message : '');
       setState('error');
     }
   };
@@ -41,7 +43,7 @@ export function AbrechnungForm() {
       <input type="hidden" name="seite" value={typeof window !== 'undefined' ? window.location.pathname : ''} />
       <p className="hp" aria-hidden="true">
         <label>
-          Bitte leer lassen <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Bitte leer lassen <input name={HONEYPOT} tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       <div className="r2">
@@ -83,7 +85,7 @@ export function AbrechnungForm() {
       </div>
       {state === 'error' && (
         <p className="err" role="alert">
-          Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schicken Sie die Abrechnung an info@ibis-payment.ch.
+          {errMsg || 'Das Senden hat nicht geklappt. Bitte versuchen Sie es erneut oder schicken Sie die Abrechnung an info@ibis-payment.ch.'}
         </p>
       )}
     </form>
